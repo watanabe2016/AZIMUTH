@@ -1166,3 +1166,16 @@ body::after {
 .icp-filing { grid-column: 1 / -1; justify-self: center; color: var(--muted); font-size: 12px; line-height: 1.8; text-underline-offset: 3px; }
 .icp-filing:hover { color: var(--blue); text-decoration: underline; }
 .icp-filing:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-radius: 3px; }
+
+/* 双项统计沿用网站原有配色，窄屏自动纵向排列。 */
+.download-counter { grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr); gap: 32px; }
+.counter-totals { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.counter-totals .counter-stat { min-height: 0; min-width: 0; padding: 8px 0 8px 24px; }
+.counter-totals .counter-stat-head { font-size: 16px; }
+.counter-totals .counter-value { margin-top: 14px; gap: 8px; }
+.counter-totals .counter-value b { font-size: clamp(36px, 4.6vw, 68px); letter-spacing: -.03em; overflow-wrap: anywhere; }
+.counter-totals .counter-note { display: block; font-size: 11px; line-height: 1.8; }
+.counter-copy .statistics-status { margin-top: 16px; color: var(--blue); font-size: 12px; }
+.statistics-explainer { margin: 16px 4px 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
+@media (max-width: 1000px) { .download-counter { grid-template-columns: 1fr; } .counter-totals .counter-stat { border-left: 0; border-top: 1px solid var(--line); padding: 22px 0 0; } }
+@media (max-width: 430px) { .counter-totals { grid-template-columns: 1fr; gap: 24px; } .counter-totals .counter-value b { font-size: 52px; } }

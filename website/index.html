@@ -15,8 +15,8 @@
       } catch (_) {}
     })();
   </script>
-  <link rel="stylesheet" href="/styles.css?v=20261029-filing">
-  <script src="/app.js?v=20261016-video-starts-2" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=20261030-stats-1">
+  <script src="/app.js?v=20261030-stats-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
@@ -77,21 +77,26 @@
     </section>
 
     <section class="download-counter-section section-wrap" aria-labelledby="download-counter-title">
-      <div class="download-counter" aria-label="当前累计下载量 0 次，正式上线后开始累计" data-spotlight>
+      <div class="download-counter" data-spotlight>
         <div class="counter-copy">
-          <span class="counter-kicker"><i aria-hidden="true"></i> AZIMUTH / 下载里程碑</span>
-          <h2 id="download-counter-title">每一次下载，<br>都是新的起航。</h2>
-          <p>正式上线后，这里会持续记录并展示 AZIMUTH 的累计下载量。</p>
+          <h2 id="download-counter-title">每一次相遇，<br>都是新的起航。</h2>
+          <p>谢谢你来到这里，也谢谢你选择 AZIMUTH。每一次访问与下载，都会在这里留下足迹。</p>
+          <p class="statistics-status" data-stats-status role="status">正在读取统计…</p>
         </div>
-        <div class="counter-stat" aria-label="累计下载 0 次">
-          <div class="counter-stat-head"><span>累计下载</span><span class="counter-live"><i aria-hidden="true"></i> 上线后统计</span></div>
-          <div class="counter-value"><b data-download-count="0">0</b><span class="counter-unit">次下载</span></div>
-          <div class="counter-note"><span class="counter-note-mark" aria-hidden="true">↗</span><span>正式上线后开始累计</span></div>
-        </div>
-        <div class="counter-ornament" aria-hidden="true">
-          <svg viewBox="0 0 640 300" preserveAspectRatio="none"><path d="M210 274c81-94 115-176 202-169 59 5 82 58 128 47 31-8 52-40 96-42"/><path d="M299 300c66-80 105-142 178-131 55 9 65 42 103 35 24-4 39-19 56-25"/><circle cx="413" cy="105" r="7"/><circle cx="540" cy="152" r="4"/><path d="M413 79v52m-26-26h52"/></svg>
+        <div class="counter-totals">
+          <div class="counter-stat">
+            <div class="counter-stat-head"><span>累计访问</span></div>
+            <div class="counter-value"><b data-visit-count>—</b><span class="counter-unit">次</span></div>
+            <p class="counter-note">官网页面浏览次数，非独立访客数</p>
+          </div>
+          <div class="counter-stat">
+            <div class="counter-stat-head"><span>累计下载</span></div>
+            <div class="counter-value"><b data-download-count>—</b><span class="counter-unit">次</span></div>
+            <p class="counter-note">官网下载请求 · 同一来源 30 分钟内合并</p>
+          </div>
         </div>
       </div>
+      <p class="statistics-explainer">统计来自服务器日志，每分钟汇总，通常延迟 1–2 分钟；已补录保留日志中的历史记录，排除可识别机器人，不含 GitHub 下载。</p>
     </section>
 
     <section class="intro-strip section-wrap" aria-label="软件定位">

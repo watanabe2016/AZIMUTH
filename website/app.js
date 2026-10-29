@@ -1,4 +1,33 @@
 (() => {
+  // 数字由服务端日志汇总，浏览器不自行累加，读取失败也不伪装成零。
+  const statisticsStatus = document.querySelector('[data-stats-status]');
+  let statisticsPending = false;
+  async function refreshStatistics() {
+    if (!statisticsStatus || statisticsPending) return;
+    statisticsPending = true;
+    try {
+      const response = await fetch('/statistics/stats.json?t=' + Date.now(), { cache: 'no-store', signal: AbortSignal.timeout(12000) });
+      if (!response.ok) throw new Error('统计暂时不可用');
+      const stats = await response.json();
+      if (!Number.isSafeInteger(stats.visits) || stats.visits < 0 || !Number.isSafeInteger(stats.downloads) || stats.downloads < 0) throw new Error('统计数据无效');
+      document.querySelector('[data-visit-count]').textContent = stats.visits.toLocaleString('zh-CN');
+      document.querySelector('[data-download-count]').textContent = stats.downloads.toLocaleString('zh-CN');
+      const updated = new Date(stats.updatedAt);
+      if (!Number.isFinite(updated.getTime())) throw new Error('统计时间无效');
+      statisticsStatus.textContent = Date.now() - updated.getTime() > 300000 ? '统计更新延迟，显示上次记录' : '已接入真实统计 · 每分钟更新';
+      statisticsStatus.title = '最近汇总：' + updated.toLocaleString('zh-CN');
+    } catch (_) {
+      statisticsStatus.textContent = '统计暂时不可用，稍后自动重试';
+    } finally {
+      statisticsPending = false;
+    }
+  }
+  refreshStatistics();
+  if (statisticsStatus) {
+    setInterval(() => { if (!document.hidden) refreshStatistics(); }, 60000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshStatistics(); });
+  }
+
   const themeButton = document.querySelector('#theme-toggle');
   const themeLabel = document.querySelector('#theme-label');
   const themeIcon = document.querySelector('.theme-icon');
