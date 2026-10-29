@@ -1,0 +1,38 @@
+# 本地环境和编译产物
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.build-cache/
+dist*/
+*.spec
+*.exe
+*.dll
+*.zip
+*.aztheme
+*.azplugin
+
+# 私人配置、题库、练习记录及凭据
+.env
+.env.*
+!.env.example
+config.json
+data/
+notes/
+logs/
+*.log
+*.pem
+*.key
+*.pfx
+*.p12
+.ssh/
+website/downloads/
+
+# 编辑器和系统临时文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+NVIDIA Corporation/

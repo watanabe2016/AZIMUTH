@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f7ff">
+  <meta name="description" content="AZIMUTH 发布版本内置两款外观：默认主题与工业极简主题。">
+  <title>皮肤市场 · AZIMUTH 方位角地面站</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>
+    (() => {
+      try {
+        const mode = localStorage.getItem('azimuth-site-theme');
+        if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode;
+      } catch (_) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/styles.css?v=20261029-filing">
+  <script src="/app.js?v=20261016-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="AZIMUTH 首页">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/azimuth-logo-board.png" alt=""></span>
+        <span class="brand-name">AZIMUTH <small>方位角地面站</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="/#features">功能亮点</a>
+        <a href="/#screens">软件一览</a>
+        <a href="/plugins.html">插件市场</a>
+        <a href="/skins.html" aria-current="page">皮肤市场</a>
+        <a href="/#download">获取软件</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换外观模式">
+          <span class="theme-icon" aria-hidden="true">◐</span><span id="theme-label">跟随系统</span>
+        </button>
+        <a class="button button-primary button-small" href="/#download">免费下载 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="market-main">
+    <section class="market-hero skin-market-hero section-wrap aurora-surface">
+      <div class="market-hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> AZIMUTH / THEMES</div>
+        <h1>两种外观，<br><span>同一套学习工具。</span></h1>
+        <p>发布版本内置默认主题与工业极简主题。你可以按自己的习惯切换界面，题卡、计时与学习流程保持一致。</p>
+        <div class="market-pills">
+          <span class="market-pill market-pill-status"><i></i> 发布版内置 · 2 款主题</span>
+          <span class="market-pill">默认主题 · 工业极简</span>
+        </div>
+      </div>
+      <div class="skin-hero-stage" aria-label="主题资源预览">
+        <div class="skin-hero-paper"></div>
+        <div class="skin-hero-image skin-hero-image-default"><img src="/assets/theme-default-home.png" alt="AZIMUTH 发布版默认主题学习首页"></div>
+        <div class="skin-hero-image skin-hero-image-industrial"><img src="/assets/theme-industrial-home.png?v=20261016-industrial-home-2" alt="AZIMUTH 发布版工业极简主题学习首页"></div>
+        <span class="skin-hero-note">发布版本内置 · 两款主题</span>
+      </div>
+    </section>
+
+    <section class="skin-catalog section-wrap" id="skin-catalog">
+      <div class="section-heading market-section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> 发布版内置主题</div><h2>挑一款顺眼的界面。</h2></div>
+        <p>两款主题随发布版本提供，可在软件设置中切换外观。</p>
+      </div>
+      <div class="skin-grid">
+        <article class="skin-card">
+          <div class="skin-art skin-art-default">
+            <span class="skin-chip">发布版内置 / 01</span>
+            <img src="/assets/theme-default-home.png" alt="AZIMUTH 默认主题学习首页" loading="lazy">
+            <span class="skin-art-caption">DEFAULT · CLEAR &amp; BRIGHT</span>
+          </div>
+          <div class="skin-card-body">
+            <div class="skin-card-heading"><div><span class="skin-card-kicker">清晰 · 明亮 · 日常练习</span><h3>默认主题</h3></div><span class="skin-index">01</span></div>
+            <p>以浅色学习首页为基础，蓝色控件搭配轻柔背景，让题卡、计时和练习记录一目了然。</p>
+            <div class="skin-card-footer"><span class="skin-resource-state"><i></i> 发布版本内置</span><a class="text-link" href="/#appearance">查看外观功能 <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="skin-card">
+          <div class="skin-art skin-art-industrial">
+            <span class="skin-chip">发布版内置 / 02</span>
+            <img src="/assets/theme-industrial-home.png" alt="AZIMUTH 工业极简主题学习首页" loading="lazy">
+            <span class="skin-art-caption">INDUSTRIAL · MINIMAL</span>
+          </div>
+          <div class="skin-card-body">
+            <div class="skin-card-heading"><div><span class="skin-card-kicker">克制 · 低干扰 · 工具感</span><h3>工业极简 · 调频训练台</h3></div><span class="skin-index">02</span></div>
+            <p>收敛装饰与色彩，让信息层级更直接，适合希望专注题目和操作流程的练习环境。</p>
+            <div class="skin-card-footer"><span class="skin-resource-state"><i></i> 发布版本内置</span><a class="text-link" href="/#appearance">查看外观功能 <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+      </div>
+      <div class="skin-market-note">
+        <span class="skin-note-icon" aria-hidden="true">✳</span>
+        <p><b>发布版本内置默认主题与工业极简主题。</b><br>可在软件设置中切换外观；题库仍需自行导入，练习记录保存在本机。</p>
+        <a class="button button-glass" href="/#features">看看软件功能 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="skin-market-close section-wrap">
+      <div><span class="eyebrow"><span class="eyebrow-dot"></span> 继续了解 AZIMUTH</span><h2>先看懂练习流程，<br>再从一张题卡开始。</h2></div>
+      <a class="button button-primary button-large" href="/#download"><span class="button-symbol" aria-hidden="true">↓</span> 下载 Windows 版</a>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><img src="/assets/azimuth-logo-board.png" alt=""></span><span class="brand-name">AZIMUTH <small>方位角地面站</small></span></a>
+    <p>把每一次练习，写成新的进步。</p>
+    <div class="footer-actions"><a href="/plugins.html">插件市场</a><a href="/skins.html" aria-current="page">皮肤市场</a><button type="button" class="footer-donate" data-open-donation>♡ 赞赏支持</button><a href="https://github.com/watanabe2016/AZIMUTH" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 ↗</a></div>
+    <small class="copyright">© 2026 AZIMUTH · Made for learning</small>
+    <a class="icp-filing" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026167359号-1</a>
+  </footer>
+
+  <dialog class="donation-dialog" id="donation-dialog" aria-labelledby="donation-title">
+    <button class="dialog-close" type="button" aria-label="关闭" data-close-donation>×</button>
+    <div class="donation-mark">♡</div><div class="eyebrow"><span class="eyebrow-dot"></span> 如果它帮到了你</div>
+    <h2 id="donation-title">请作者喝杯咖啡</h2><p>感谢你支持 AZIMUTH 的持续改进。</p>
+    <img class="donation-qr" src="/assets/reward-qrcode.png" alt="微信赞赏码"><small>微信扫码 · 谢谢你的支持</small>
+  </dialog>
+</body>
+</html>

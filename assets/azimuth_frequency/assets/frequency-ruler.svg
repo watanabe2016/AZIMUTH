@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 112" role="img" aria-labelledby="title desc">
+  <title id="title">调频刻度尺</title>
+  <desc id="desc">黑灰色刻度、红色当前频点指针与 118 到 130 MHz 刻度标签。</desc>
+  <g fill="none" stroke="#9ca5aa" stroke-width="1">
+    <path d="M20 34v50 M28 62v22 M36 62v22 M44 62v22 M52 62v22 M60 62v22 M68 62v22 M76 62v22 M84 62v22 M92 62v22 M100 42v42 M108 62v22 M116 62v22 M124 62v22 M132 62v22 M140 62v22 M148 62v22 M156 62v22 M164 62v22 M172 62v22 M180 34v50 M188 62v22 M196 62v22 M204 62v22 M212 62v22 M220 62v22 M228 62v22 M236 62v22 M244 62v22 M252 62v22 M260 42v42 M268 62v22 M276 62v22 M284 62v22 M292 62v22 M300 62v22 M308 62v22 M316 62v22 M324 62v22 M332 62v22 M340 34v50 M348 62v22 M356 62v22 M364 62v22 M372 62v22 M380 62v22 M388 62v22 M396 62v22 M404 62v22 M412 62v22 M420 42v42 M428 62v22 M436 62v22 M444 62v22 M452 62v22 M460 62v22 M468 62v22 M476 62v22 M484 62v22 M492 62v22 M500 34v50 M508 62v22 M516 62v22 M524 62v22 M532 62v22 M540 62v22 M548 62v22 M556 62v22 M564 62v22 M572 62v22 M580 42v42 M588 62v22 M596 62v22 M604 62v22 M612 62v22 M620 62v22 M628 62v22 M636 62v22 M644 62v22 M652 62v22 M660 34v50 M668 62v22 M676 62v22 M684 62v22 M692 62v22 M700 62v22 M708 62v22 M716 62v22 M724 62v22 M732 62v22 M740 42v42 M748 62v22 M756 62v22 M764 62v22 M772 62v22 M780 62v22 M788 62v22 M796 62v22 M804 62v22 M812 62v22 M820 34v50 M828 62v22 M836 62v22 M844 62v22 M852 62v22 M860 62v22 M868 62v22 M876 62v22 M884 62v22 M892 62v22 M900 42v42 M908 62v22 M916 62v22 M924 62v22 M932 62v22 M940 62v22 M948 62v22 M956 62v22 M964 62v22 M972 62v22 M980 34v50"/>
+    <path d="M20 85h960" stroke="#697379"/>
+  </g>
+  <g fill="#70787d" font-family="Consolas,monospace" font-size="13" text-anchor="middle">
+    <text x="20" y="105">118</text><text x="180" y="105">120</text><text x="340" y="105">122</text><text x="500" y="105">124</text><text x="660" y="105">126</text><text x="820" y="105">128</text><text x="980" y="105">130 MHz</text>
+  </g>
+  <path d="M500 22v69" stroke="#f1342d" stroke-width="2"/>
+  <circle cx="500" cy="22" r="5" fill="#f1342d"/>
+  <text x="500" y="15" fill="#f1342d" font-family="Consolas,monospace" font-size="13" font-weight="700" text-anchor="middle">124.0</text>
+</svg>

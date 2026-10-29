@@ -1,0 +1,19 @@
+AZIMUTH OCR component notices
+
+RapidOCR 3.9.2 source code and engineering components are distributed under
+the Apache License 2.0. The three bundled OCR model files are converted from
+PaddleOCR model weights and are distributed under Apache License 2.0. Copyright
+in upstream model weights belongs to Baidu and/or the respective PaddleOCR
+rights holders. Model metadata and hashes are documented by RapidOCR:
+https://github.com/RapidAI/RapidOCR/blob/main/MODEL_LICENSES.md
+
+ONNX Runtime 1.30.0 is distributed under the MIT License:
+https://github.com/microsoft/onnxruntime/blob/main/LICENSE
+
+OpenCV Python 5.0.0.93 is distributed under the Apache License 2.0:
+https://github.com/opencv/opencv-python/blob/5.x/LICENSE.txt
+
+The complete Apache License 2.0 text is included in
+tools/ocr/LICENSE-2.0.txt. The ONNX Runtime MIT License text is included in
+assets/ONNX-RUNTIME-LICENSE.txt, and its third-party notices are included in
+the bundled onnxruntime package.

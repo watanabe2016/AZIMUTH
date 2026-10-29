@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-labelledby="title desc">
+  <title id="title">三角形航点图</title>
+  <desc id="desc">带角度刻度与当前航点标记的等边三角形。</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#aeb5b9" stroke-opacity=".35" stroke-width="1"/><circle cx="0" cy="0" r="1.2" fill="#92999d" fill-opacity=".6"/></pattern>
+  </defs>
+  <rect x="10" y="10" width="500" height="340" rx="4" fill="url(#grid)"/>
+  <path d="M260 70 105 300h310z" fill="none" stroke="#15191c" stroke-width="3"/>
+  <path d="M242 96a34 34 0 0 1 36 0M123 278a34 34 0 0 1 31-18M366 260a34 34 0 0 1 31 18" fill="none" stroke="#15191c" stroke-width="1.5"/>
+  <g fill="#70787d" font-family="Consolas,monospace" font-size="16"><text x="260" y="137" text-anchor="middle">60°</text><text x="157" y="269">60°</text><text x="363" y="269">60°</text></g>
+  <g font-family="Consolas,monospace" font-size="15" font-weight="700" text-anchor="middle">
+    <circle cx="260" cy="70" r="17" fill="#f1342d"/><text x="260" y="76" fill="#fff">1</text>
+    <circle cx="415" cy="300" r="15" fill="#15191c"/><text x="415" y="306" fill="#fff">2</text>
+    <circle cx="105" cy="300" r="15" fill="#15191c"/><text x="105" y="306" fill="#fff">3</text>
+  </g>
+  <g stroke="#f1342d" stroke-width="1.4"><path d="M260 38v18M228 70h18M292 70h18"/></g>
+</svg>

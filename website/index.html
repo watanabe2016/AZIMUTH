@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f7ff">
+  <meta name="description" content="AZIMUTH 方位角地面站：用题卡练习、分段计时、自动审题与 AI 参考答案，陪你一步步掌握地面站任务。">
+  <title>AZIMUTH · 方位角地面站</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>
+    (() => {
+      try {
+        const mode = localStorage.getItem('azimuth-site-theme');
+        if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode;
+      } catch (_) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/styles.css?v=20261029-filing">
+  <script src="/app.js?v=20261016-video-starts-2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="AZIMUTH 首页">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/azimuth-logo-board.png" alt=""></span>
+        <span class="brand-name">AZIMUTH <small>方位角地面站</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#features">功能亮点</a>
+        <a href="#screens">软件一览</a>
+        <a href="/plugins.html">插件市场</a>
+        <a href="/skins.html">皮肤市场</a>
+        <a href="#download">获取软件</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换外观模式">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span id="theme-label">跟随系统</span>
+        </button>
+        <a class="button button-primary button-small" href="#download">免费下载 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap aurora-surface" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> 为地面站学习而做</div>
+        <h1>把每一次练习，<br><span>写成新的进步。</span></h1>
+        <p class="hero-lede">先看懂题目，再掌握航线。AZIMUTH 把题卡、计时、审题与参考思路放进一个清爽的学习工作台。</p>
+        <div class="hero-actions">
+          <a class="button button-primary button-large" href="https://azimuth.xin/downloads/AZIMUTH-v1.0-Setup.exe" download="AZIMUTH-v1.0-Setup.exe">
+            <span class="button-symbol" aria-hidden="true">↓</span> 下载 Windows 版 <span class="button-note">v1.0</span>
+          </a>
+          <a class="button button-secondary button-large" href="https://github.com/watanabe2016/AZIMUTH" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.4-6-2.8m12 5.6v-3.3a2.9 2.9 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6A4.7 4.7 0 0 0 18.4 7a4.4 4.4 0 0 0-.1-3.3s-1-.3-3.3 1.3a11.4 11.4 0 0 0-6 0C6.7 3.4 5.7 3.7 5.7 3.7A4.4 4.4 0 0 0 5.6 7a4.7 4.7 0 0 0-1.3 3.3c0 4.7 2.8 5.7 5.5 6a2.9 2.9 0 0 0-.8 2.3v3.3"/></svg>
+            GitHub <span class="coming-soon">开源仓库</span>
+          </a>
+          <button class="button button-quiet button-large" type="button" data-open-donation>
+            <span class="heart-symbol" aria-hidden="true">♡</span> 请作者喝杯咖啡
+          </button>
+        </div>
+        <p class="hero-footnote"><span aria-hidden="true">✦</span> 免费使用 · 本地保存学习进度 · 题库由你导入</p>
+      </div>
+      <div class="hero-visual" aria-label="AZIMUTH 学习首页界面预览">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+        <div class="preview-window">
+          <div class="preview-topbar"><span class="window-dots"><i></i><i></i><i></i></span><span>AZIMUTH · 学习首页</span><span class="preview-status"><i></i> 本地学习</span></div>
+          <img src="/assets/screen-home-loaded.png" alt="AZIMUTH 学习首页，展示题库练习、限时模拟和错题回顾入口" fetchpriority="high">
+        </div>
+        <div class="float-note note-import"><span class="note-icon">＋</span><span><b>导入你的题卡</b><small>从自己的资料开始练习</small></span></div>
+        <div class="float-note note-progress"><span class="progress-ring">✓</span><span><b>每一步都有记录</b><small>练习进度保存在本机</small></span></div>
+        <div class="visual-caption">导入题卡后的软件界面预览</div>
+      </div>
+    </section>
+
+    <section class="download-counter-section section-wrap" aria-labelledby="download-counter-title">
+      <div class="download-counter" aria-label="当前累计下载量 0 次，正式上线后开始累计" data-spotlight>
+        <div class="counter-copy">
+          <span class="counter-kicker"><i aria-hidden="true"></i> AZIMUTH / 下载里程碑</span>
+          <h2 id="download-counter-title">每一次下载，<br>都是新的起航。</h2>
+          <p>正式上线后，这里会持续记录并展示 AZIMUTH 的累计下载量。</p>
+        </div>
+        <div class="counter-stat" aria-label="累计下载 0 次">
+          <div class="counter-stat-head"><span>累计下载</span><span class="counter-live"><i aria-hidden="true"></i> 上线后统计</span></div>
+          <div class="counter-value"><b data-download-count="0">0</b><span class="counter-unit">次下载</span></div>
+          <div class="counter-note"><span class="counter-note-mark" aria-hidden="true">↗</span><span>正式上线后开始累计</span></div>
+        </div>
+        <div class="counter-ornament" aria-hidden="true">
+          <svg viewBox="0 0 640 300" preserveAspectRatio="none"><path d="M210 274c81-94 115-176 202-169 59 5 82 58 128 47 31-8 52-40 96-42"/><path d="M299 300c66-80 105-142 178-131 55 9 65 42 103 35 24-4 39-19 56-25"/><circle cx="413" cy="105" r="7"/><circle cx="540" cy="152" r="4"/><path d="M413 79v52m-26-26h52"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-strip section-wrap" aria-label="软件定位">
+      <div class="strip-title"><span class="strip-star">✳</span><span>一套安静、专注的<br><b>地面站学习工具</b></span></div>
+      <p>把题目导入进来，按自己的节奏练习；遇到难点，借助审题提示和 AI 参考思路，再回到题卡验证每一步。</p>
+      <a href="#features" class="text-link">认识五项功能 <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="features section-wrap" id="features">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> 为练习的每一步准备</div><h2>需要的功能，<br class="mobile-break">刚好都在手边。</h2></div>
+        <p>没有复杂的学习流程。打开软件，选择题卡，开始一次专注练习。</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-bank" id="question-bank">
+          <div class="feature-copy"><span class="feature-index rose">01 / 题卡</span><h3>自己的题库，<br>自己导入。</h3><p>导入个人题卡与资料，按题号或关键词查找，随机抽题练习。软件不附带默认题库。</p><span class="feature-caption">从你的学习资料出发</span></div>
+          <div class="feature-media bank-media">
+            <div class="media-label"><span class="live-dot"></span> 题卡预览 <span class="label-meta">用户导入</span></div>
+            <div class="screenshot-frame"><video class="lazy-preview-video" data-lazy-video data-start-at="5" data-src="/assets/question-bank-demo.mp4?v=20261016-crop-1" poster="/assets/question-bank-start-5s.jpg?v=20261016-start-1" preload="metadata" controls muted playsinline loop aria-label="AZIMUTH 题库题卡功能实录，演示导入后的题卡操作"></video></div>
+            <div class="scan-line" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="feature-card feature-timer">
+          <div class="feature-copy"><span class="feature-index violet">02 / 计时</span><h3>分段计时，<br>找回考试节奏。</h3><p>分别设置问题与作答时长，按真实节奏演练；到点提醒，自动进入下一阶段。</p><span class="feature-caption">问题与作答时间一目了然</span></div>
+          <div class="timer-demo timer-video-demo" aria-label="AZIMUTH 限时模拟真实软件录屏">
+            <div class="timer-video-heading"><span><i aria-hidden="true"></i>真实软件界面</span><span>限时模拟</span></div>
+            <div class="timer-video-window">
+              <video class="lazy-preview-video" data-lazy-video data-src="/assets/countdown-demo.mp4?v=20261016-crop-1" poster="/assets/theme-default-timer.png" preload="none" controls muted playsinline loop aria-label="AZIMUTH 软件限时模拟页面中的真实倒计时动画">
+                您的浏览器暂不支持播放此视频。
+              </video>
+            </div>
+            <p class="timer-video-caption">问题与作答分段计时 · 软件实录</p>
+          </div>
+        </article>
+
+        <article class="feature-card feature-review">
+          <div class="feature-copy"><span class="feature-index orange">03 / 自动审题</span><h3>先理清条件，<br>再开始作答。</h3><p>自动梳理题目中的任务要求、已知条件与关键位置，帮你建立清晰的审题顺序。</p><span class="feature-caption">让条件与要求更好读</span></div>
+          <div class="review-demo review-real-frame" aria-label="AZIMUTH 自动审题结果页真实软件界面">
+            <img src="/assets/screen-review-result-real.png" alt="AZIMUTH 自动审题结果界面，展示问题总数、需修正项目和建议坐标" loading="lazy">
+          </div>
+        </article>
+
+        <article class="feature-card feature-ai">
+          <div class="feature-copy"><span class="feature-index blue">04 / AI 参考答案</span><h3>多一个思路，<br>多一次对照。</h3><p>根据当前题卡生成参考答案与解题思路，辅助复盘。答案用于学习参考，最终请对照原题核验。</p><span class="feature-caption">由你选择并配置 AI 服务</span></div>
+          <div class="answer-demo answer-real-frame" aria-label="AZIMUTH AI 参考答案真实软件界面">
+            <img src="/assets/screen-ai-answer-real.png" alt="AZIMUTH AI 参考答案界面，左侧为题卡与航图编辑，右侧展示教学航图、航向推导和分段航线表" loading="lazy">
+          </div>
+        </article>
+
+        <article class="feature-card feature-appearance" id="appearance">
+          <div class="appearance-copy"><span class="feature-index navy">05 / 外观</span><h3>亮暗随你，<br>界面也有自己的风格。</h3><p>浅色、深色或跟随系统；搭配主题与背景，让学习工作台顺眼、顺手。</p><span class="feature-caption">偏好保存在本机</span></div>
+          <div class="appearance-preview">
+            <div class="appearance-controls"><span>外观模式</span><div class="mode-pills"><i>浅色</i><i class="mode-dark">深色</i><i class="mode-system">跟随系统</i></div></div>
+            <div class="appearance-screen"><img src="/assets/theme-default-settings.png" alt="AZIMUTH 默认主题设置页面中的外观模式和主题选择" loading="lazy"><div class="theme-glint" aria-hidden="true"></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="screens-overview section-wrap" id="screens">
+      <div class="screens-card">
+        <div class="screens-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> 轻松上手</div><h2>熟悉的学习节奏，<br>更专注的练习空间。</h2><p>题卡、限时模拟、审题辅助与外观设置在一个桌面应用里完成。学习数据保存在本机，方便你按自己的进度持续练习。</p><a class="text-link" href="#download">开始使用 AZIMUTH <span aria-hidden="true">↗</span></a></div>
+        <div class="screens-stack" aria-label="软件页面缩略图">
+          <div class="stack-card stack-home"><video class="lazy-preview-video" data-lazy-video data-start-at="10" data-src="/assets/teaching-demo.mp4?v=20261016-crop-1" poster="/assets/teaching-start-10s.jpg?v=20261016-start-1" preload="metadata" controls muted playsinline loop aria-label="AZIMUTH 地面站教学流程实录"></video></div>
+          <div class="stack-card stack-timer"><img src="/assets/theme-default-timer.png" alt="默认主题下的限时模拟页面" loading="lazy"></div>
+          <div class="stack-card stack-settings"><img src="/assets/theme-default-settings.png" alt="默认主题下的外观设置页面" loading="lazy"></div>
+          <span class="stack-orbit orbit-a"></span><span class="stack-orbit orbit-b"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="practice-notes section-wrap" id="details">
+      <div class="section-heading fact-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> 软件里的真实细节</div><h2>不放虚构评价，<br class="mobile-break">看看它怎么陪你练习。</h2></div>
+        <div class="fact-heading-actions"><p>每张卡片都来自 AZIMUTH 当前已有的功能。</p><button class="button button-glass button-pause" type="button" data-toggle-facts aria-pressed="false">Ⅱ <span>暂停动态卡片</span></button></div>
+      </div>
+      <div class="fact-columns" aria-label="AZIMUTH 当前功能信息">
+        <div class="fact-column" style="--column-speed: 31s">
+          <div class="fact-track">
+            <div class="fact-group">
+              <article class="fact-card"><span class="fact-kicker">01 / 题卡由你准备</span><h3>从自己的资料开始。</h3><p>题库需要自行导入，软件不附带默认题目。</p><span class="fact-mark">题卡 · 本地使用</span></article>
+              <article class="fact-card"><span class="fact-kicker">02 / 查找方式</span><h3>按题号或关键词找题。</h3><p>导入题卡后，可以搜索题目，也可以随机抽题练习。</p><span class="fact-mark">搜索 · 随机练习</span></article>
+              <article class="fact-card"><span class="fact-kicker">03 / 外观偏好</span><h3>亮暗模式由你决定。</h3><p>切换浅色、深色或跟随系统，外观偏好保存在本机。</p><span class="fact-mark">浅色 · 深色 · 系统</span></article>
+            </div>
+            <div class="fact-group" aria-hidden="true">
+              <article class="fact-card"><span class="fact-kicker">01 / 题卡由你准备</span><h3>从自己的资料开始。</h3><p>题库需要自行导入，软件不附带默认题目。</p><span class="fact-mark">题卡 · 本地使用</span></article>
+              <article class="fact-card"><span class="fact-kicker">02 / 查找方式</span><h3>按题号或关键词找题。</h3><p>导入题卡后，可以搜索题目，也可以随机抽题练习。</p><span class="fact-mark">搜索 · 随机练习</span></article>
+              <article class="fact-card"><span class="fact-kicker">03 / 外观偏好</span><h3>亮暗模式由你决定。</h3><p>切换浅色、深色或跟随系统，外观偏好保存在本机。</p><span class="fact-mark">浅色 · 深色 · 系统</span></article>
+            </div>
+          </div>
+        </div>
+        <div class="fact-column" style="--column-speed: 26s">
+          <div class="fact-track">
+            <div class="fact-group">
+              <article class="fact-card"><span class="fact-kicker">04 / 分段计时</span><h3>问题与作答分别计时。</h3><p>按练习需要设置每一阶段时长，熟悉真实考试节奏。</p><span class="fact-mark">问题阶段 → 作答阶段</span></article>
+              <article class="fact-card"><span class="fact-kicker">05 / 时间提醒</span><h3>到点提醒，继续下一步。</h3><p>可设置阶段结束提示音，并按设置自动进入作答。</p><span class="fact-mark">提醒 · 自动衔接</span></article>
+              <article class="fact-card"><span class="fact-kicker">06 / 练习记录</span><h3>学习进度留在本机。</h3><p>记录练习状态与答题情况，方便你继续复习。</p><span class="fact-mark">本地保存</span></article>
+            </div>
+            <div class="fact-group" aria-hidden="true">
+              <article class="fact-card"><span class="fact-kicker">04 / 分段计时</span><h3>问题与作答分别计时。</h3><p>按练习需要设置每一阶段时长，熟悉真实考试节奏。</p><span class="fact-mark">问题阶段 → 作答阶段</span></article>
+              <article class="fact-card"><span class="fact-kicker">05 / 时间提醒</span><h3>到点提醒，继续下一步。</h3><p>可设置阶段结束提示音，并按设置自动进入作答。</p><span class="fact-mark">提醒 · 自动衔接</span></article>
+              <article class="fact-card"><span class="fact-kicker">06 / 练习记录</span><h3>学习进度留在本机。</h3><p>记录练习状态与答题情况，方便你继续复习。</p><span class="fact-mark">本地保存</span></article>
+            </div>
+          </div>
+        </div>
+        <div class="fact-column" style="--column-speed: 34s">
+          <div class="fact-track">
+            <div class="fact-group">
+              <article class="fact-card"><span class="fact-kicker">07 / 自动审题</span><h3>先理清条件，再开始作答。</h3><p>把任务要求、已知条件和关键位置梳理成清晰顺序。</p><span class="fact-mark">自动审题辅助</span></article>
+              <article class="fact-card"><span class="fact-kicker">08 / AI 参考答案</span><h3>多一个思路作对照。</h3><p>根据当前题卡生成参考答案与解题思路，辅助复盘。</p><span class="fact-mark">AI 内容仅供学习参考</span></article>
+              <article class="fact-card"><span class="fact-kicker">09 / 核对原题</span><h3>回到题卡验证每一步。</h3><p>AI 输出不是标准答案；请结合题目条件自行判断和核验。</p><span class="fact-mark">参考 · 对照 · 复盘</span></article>
+            </div>
+            <div class="fact-group" aria-hidden="true">
+              <article class="fact-card"><span class="fact-kicker">07 / 自动审题</span><h3>先理清条件，再开始作答。</h3><p>把任务要求、已知条件和关键位置梳理成清晰顺序。</p><span class="fact-mark">自动审题辅助</span></article>
+              <article class="fact-card"><span class="fact-kicker">08 / AI 参考答案</span><h3>多一个思路作对照。</h3><p>根据当前题卡生成参考答案与解题思路，辅助复盘。</p><span class="fact-mark">AI 内容仅供学习参考</span></article>
+              <article class="fact-card"><span class="fact-kicker">09 / 核对原题</span><h3>回到题卡验证每一步。</h3><p>AI 输出不是标准答案；请结合题目条件自行判断和核验。</p><span class="fact-mark">参考 · 对照 · 复盘</span></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section section-wrap" id="download">
+      <div class="download-panel">
+        <div class="download-star" aria-hidden="true">✳</div>
+        <div class="download-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> 从一次练习开始</div><h2>准备好，掌握你的航线。</h2><p>下载 AZIMUTH Windows 版，导入自己的题卡，开启第一轮练习。</p></div>
+        <div class="download-actions">
+          <a class="button button-primary button-large" href="https://azimuth.xin/downloads/AZIMUTH-v1.0-Setup.exe" download="AZIMUTH-v1.0-Setup.exe"><span class="button-symbol" aria-hidden="true">↓</span> 下载 Windows 版 <span class="button-note">v1.0</span></a>
+          <span class="download-meta">免费 · Windows 桌面版</span>
+        </div>
+      </div>
+      <div class="product-notes"><span>题库需要自行导入</span><span>AI 生成内容仅作参考</span><span>偏好与进度保存在本机</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><img src="/assets/azimuth-logo-board.png" alt=""></span><span class="brand-name">AZIMUTH <small>方位角地面站</small></span></a>
+    <p>把每一次练习，写成新的进步。</p>
+    <div class="footer-actions"><a href="/plugins.html">插件市场</a><a href="/skins.html">皮肤市场</a><button type="button" class="footer-donate" data-open-donation>♡ 赞赏支持</button><a href="https://github.com/watanabe2016/AZIMUTH" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 ↗</a></div>
+    <small class="copyright">© 2026 AZIMUTH · Made for learning</small>
+    <a class="icp-filing" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026167359号-1</a>
+  </footer>
+
+  <dialog class="donation-dialog" id="donation-dialog" aria-labelledby="donation-title">
+    <button class="dialog-close" type="button" aria-label="关闭" data-close-donation>×</button>
+    <div class="donation-mark">♡</div>
+    <div class="eyebrow"><span class="eyebrow-dot"></span> 如果它帮到了你</div>
+    <h2 id="donation-title">请作者喝杯咖啡</h2>
+    <p>感谢你支持 AZIMUTH 的持续改进。</p>
+    <img class="donation-qr" src="/assets/reward-qrcode.png" alt="微信赞赏码">
+    <small>微信扫码 · 谢谢你的支持</small>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "scope": "素材包文件、核心文字配色、网页预览；未在宿主Qt应用内安装或做业务回归",
+  "screenCount": 10,
+  "svgCount": 174,
+  "characterAlpha": {
+    "mode": "RGBA",
+    "extrema": [
+      0,
+      255
+    ],
+    "transparentPixels": 780379,
+    "totalPixels": 1572528
+  },
+  "fontCmapPassed": true,
+  "contrastRatios": {
+    "light": {
+      "text/surface": 13.72,
+      "muted/surface": 5.6,
+      "link/surface": 6.13,
+      "onPrimary/primary": 6.13,
+      "danger/surface": 6.12,
+      "success/surface": 6.39
+    },
+    "dark": {
+      "text/surface": 13.38,
+      "muted/surface": 7.94,
+      "link/surface": 7.98,
+      "onPrimary/primary": 6.13,
+      "danger/surface": 7.32,
+      "success/surface": 8.97
+    }
+  },
+  "browserChecks": {
+    "componentImagesLoaded": true,
+    "lightDarkToggle": true,
+    "sampleButtonResponse": true,
+    "galleryDarkVisibleCount": 5,
+    "galleryComparisonToggle": true,
+    "desktopHorizontalOverflow": false,
+    "galleryConsoleErrors": []
+  },
+  "checks": [
+    "PNG可解码",
+    "SVG XML可解析",
+    "JS语法",
+    "Python接入代码语法",
+    "HTML与CSS本地引用",
+    "透明通道",
+    "10张效果图",
+    "中文字体覆盖",
+    "核心文字对比度"
+  ],
+  "errors": []
+}

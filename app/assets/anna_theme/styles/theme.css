@@ -1,0 +1,101 @@
+/* 杏菜的青春封面：仅作用于带有 data-anna-theme 的容器。 */
+@font-face{font-family:"Anna Noto Sans SC";src:url("../assets/fonts/NotoSansSC-Variable.ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Anna Caveat";src:url("../assets/fonts/Caveat-Variable.ttf") format("truetype");font-weight:400 700;font-style:normal;font-display:swap}
+.anna-signature{font-family:"Anna Caveat",cursive;font-size:38px;color:var(--anna-link);line-height:1.1;transform:rotate(-5deg);transform-origin:left center}
+[data-anna-theme="light"]{color-scheme:light;
+  --anna-bg:#FFFCF5;
+  --anna-sidebar:#FFFDF8;
+  --anna-surface:#FFFFFF;
+  --anna-surface-alt:#F0F4FC;
+  --anna-text:#202D48;
+  --anna-muted:#5C6880;
+  --anna-border:#D6DDEC;
+  --anna-control-border:#74819B;
+  --anna-primary:#315BC4;
+  --anna-primary-hover:#264BA7;
+  --anna-on-primary:#FFFFFF;
+  --anna-link:#315BC4;
+  --anna-coral:#B43C55;
+  --anna-coral-soft:#FDECF0;
+  --anna-yellow:#956400;
+  --anna-yellow-soft:#FFF4CD;
+  --anna-success:#226B50;
+  --anna-success-soft:#E7F4ED;
+  --anna-danger:#B33047;
+  --anna-danger-soft:#FDEBF0;
+  --anna-focus:#315BC4;
+  --anna-disabled-bg:#E8ECF2;
+  --anna-disabled-text:#66728A;
+  --anna-diagram-fill:#E1E9FB;
+  --anna-diagram-line:#315BC4;
+  --anna-paper:#FFFFFF;
+  --anna-paper-text:#202D48;
+}
+[data-anna-theme="dark"]{color-scheme:dark;
+  --anna-bg:#101827;
+  --anna-sidebar:#131E31;
+  --anna-surface:#1B2941;
+  --anna-surface-alt:#22334E;
+  --anna-text:#F3F5FB;
+  --anna-muted:#B4C0D5;
+  --anna-border:#3C4E6C;
+  --anna-control-border:#7B91B3;
+  --anna-primary:#315BC4;
+  --anna-primary-hover:#264BA7;
+  --anna-on-primary:#FFFFFF;
+  --anna-link:#A9BEFF;
+  --anna-coral:#FF91A1;
+  --anna-coral-soft:#422637;
+  --anna-yellow:#F3CE76;
+  --anna-yellow-soft:#3B3325;
+  --anna-success:#8DDBB3;
+  --anna-success-soft:#203C35;
+  --anna-danger:#FF9BAC;
+  --anna-danger-soft:#442637;
+  --anna-focus:#AEC6FF;
+  --anna-disabled-bg:#29364D;
+  --anna-disabled-text:#A3AFC2;
+  --anna-diagram-fill:#283F66;
+  --anna-diagram-line:#A9BEFF;
+  --anna-paper:#FFFFFF;
+  --anna-paper-text:#202D48;
+}
+[data-anna-theme]{--anna-radius:12px;--anna-control-radius:8px;--anna-gap:20px;--anna-font:"Anna Noto Sans SC","Microsoft YaHei","Segoe UI",sans-serif;color:var(--anna-text);background:var(--anna-bg);font-family:var(--anna-font);line-height:1.65}
+[data-anna-theme] *{box-sizing:border-box}
+.anna-panel{background:var(--anna-surface);border:1px solid var(--anna-border);border-radius:var(--anna-radius);padding:24px}
+.anna-muted{color:var(--anna-muted)}
+.anna-button{font:600 15px/1.4 var(--anna-font);min-height:44px;padding:10px 22px;border:1px solid var(--anna-control-border);border-radius:var(--anna-control-radius);color:var(--anna-text);background:var(--anna-surface);cursor:pointer;display:inline-flex;gap:8px;align-items:center;justify-content:center;text-decoration:none;transition:background-color 140ms}
+.anna-button:hover{background:var(--anna-surface-alt)}
+.anna-button--primary,.anna-button[aria-pressed="true"]{background:var(--anna-primary);border-color:var(--anna-primary);color:var(--anna-on-primary)}
+.anna-button--primary:hover,.anna-button[aria-pressed="true"]:hover{background:var(--anna-primary-hover)}
+.anna-button:disabled{background:var(--anna-disabled-bg);color:var(--anna-disabled-text);border-color:var(--anna-border);cursor:not-allowed}
+[data-anna-theme] :is(button,a,input,select,textarea):focus-visible{outline:3px solid var(--anna-focus);outline-offset:3px}
+.anna-input{font:400 16px/1.5 var(--anna-font);height:44px;padding:10px 14px;border:1px solid var(--anna-control-border);border-radius:8px;color:var(--anna-text);background:var(--anna-surface)}
+.anna-input::placeholder{color:var(--anna-muted);opacity:1}
+.anna-input[aria-invalid="true"]{border:2px solid var(--anna-danger)}
+.anna-link{color:var(--anna-link);text-underline-offset:4px}
+.anna-nav-link{display:flex;gap:12px;align-items:center;min-height:48px;padding:12px 18px;border-radius:8px;color:var(--anna-text);text-decoration:none}
+.anna-nav-link[aria-current="page"]{background:var(--anna-primary);color:var(--anna-on-primary);font-weight:700}
+.anna-icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.anna-hero{position:relative;isolation:isolate;min-height:390px;overflow:hidden;padding:40px;background:var(--anna-bg)}
+.anna-hero__sky{position:absolute;inset:0 0 0 34%;background:url("../assets/backgrounds/sky-light.png") right center/cover;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);z-index:-2}
+[data-anna-theme="dark"] .anna-hero__sky{background-image:url("../assets/backgrounds/sky-dark.png")}
+.anna-hero__character{position:absolute;right:5%;bottom:-18%;height:112%;max-width:49%;object-fit:contain;object-position:bottom;z-index:-1;pointer-events:none}
+.anna-hero__copy{max-width:52%}
+.anna-hero h1{font-size:clamp(32px,3.7vw,58px);line-height:1.2;letter-spacing:-.035em;margin:12px 0 22px;font-weight:900}
+.anna-hero h1 em{color:var(--anna-coral);font-style:normal}
+.anna-chapter{color:var(--anna-link);font-size:16px;font-weight:700;display:flex;gap:18px;align-items:center}
+.anna-chapter:after{content:"";width:90px;height:1px;background:currentColor}
+.anna-inner-header{min-height:144px;position:relative;overflow:hidden;padding:20px 28px}
+.anna-inner-header h1{font-size:36px;margin:8px 0;line-height:1.25}
+.anna-inner-header__art{position:absolute;right:20px;bottom:-90px;width:280px;pointer-events:none}
+.anna-paper{background:var(--anna-paper);color:var(--anna-paper-text);color-scheme:light}
+.anna-alert{border-left:3px solid var(--anna-coral);background:var(--anna-coral-soft);padding:14px 18px;border-radius:0 8px 8px 0}
+.anna-toggle{appearance:none;position:relative;width:48px;height:28px;border:1px solid var(--anna-control-border);border-radius:99px;background:var(--anna-disabled-bg);cursor:pointer;vertical-align:middle;flex:none}
+.anna-toggle:before{content:"";display:block;position:absolute;width:20px;height:20px;top:3px;left:3px;border-radius:50%;background:var(--anna-muted)}
+.anna-toggle:checked{background:var(--anna-primary);border-color:var(--anna-primary)}
+.anna-toggle:checked:before{left:23px;background:#fff}
+.anna-timer{font-variant-numeric:tabular-nums;font-size:112px;line-height:1;font-weight:800}
+@media(max-width:1100px){.anna-hero{min-height:320px;padding:28px}.anna-hero h1{font-size:36px}.anna-inner-header__art{opacity:.35}.anna-timer{font-size:80px}}
+@media(prefers-reduced-motion:reduce){[data-anna-theme] *,[data-anna-theme] *:before{transition:none!important;animation:none!important}}
+

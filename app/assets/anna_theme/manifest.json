@@ -1,0 +1,1463 @@
+{
+  "name": "杏菜的青春封面",
+  "version": "1.0.0",
+  "generatedAt": "2026-10-03",
+  "fileCountExcludingManifest": 206,
+  "files": [
+    {
+      "path": "adapters/qt_theme.py",
+      "bytes": 1317,
+      "sha256": "c591b0f1f3e154eddb672d55d39c34c00e4e878fb84654afa638ecb18f053149",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "assets/backgrounds/sky-dark.png",
+      "bytes": 2111605,
+      "sha256": "5d9d66a8fd18d9f5e74a412b443e98a1b351cbdd9647452217a2c5e49ed92097",
+      "purpose": "独立场景背景",
+      "width": 1672,
+      "height": 941,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "assets/backgrounds/sky-light.png",
+      "bytes": 1856988,
+      "sha256": "6ec8c20ba31fa829772bb5887113677a4cd7dab0b59ed3fc26360902e28de8a2",
+      "purpose": "独立场景背景",
+      "width": 1672,
+      "height": 941,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "assets/brand/azimuth-icon.ico",
+      "bytes": 143936,
+      "sha256": "0b2504b2347afe1c4d4ffc51aaf87cec5c93de5c6ed228895ccf95e6aac73755",
+      "purpose": "原项目品牌标识",
+      "width": 256,
+      "height": 256,
+      "colorMode": "RGBA"
+    },
+    {
+      "path": "assets/brand/azimuth-icon.png",
+      "bytes": 1431428,
+      "sha256": "c611916825d402a96df83600ea6d69d04da7b24bd98c47f272239836069bf97e",
+      "purpose": "原项目品牌标识",
+      "width": 1254,
+      "height": 1254,
+      "colorMode": "RGBA"
+    },
+    {
+      "path": "assets/characters/anna-hero.png",
+      "bytes": 1339942,
+      "sha256": "a302b414aef22fe85825c272f2d5f9bbaed209ca30fcb5a25f98e94a0f914d60",
+      "purpose": "透明人物图层",
+      "width": 1086,
+      "height": 1448,
+      "colorMode": "RGBA"
+    },
+    {
+      "path": "assets/figures/bow-motif.svg",
+      "bytes": 834,
+      "sha256": "50d84e8206d4b27d4bd4cfcba8b67bc97547146a76d9c3d802f34605eb776ad2",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 64 120"
+    },
+    {
+      "path": "assets/figures/dark/butterfly.svg",
+      "bytes": 862,
+      "sha256": "bd736504feb526a1a54cb02026f078fc0d381b37b36d344276099f258d6384bb",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/dark/circle.svg",
+      "bytes": 177,
+      "sha256": "7a5eb49f3aba25ad681b88d662748bd9d34b51c879d7bcc88416550fb1b33fa4",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/dark/hexagon.svg",
+      "bytes": 1238,
+      "sha256": "ae54decd0319fd7e8db5c82509ba4bab5c8158b94c87d994f8e3fa6bf9417d2e",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/dark/pentagon.svg",
+      "bytes": 1038,
+      "sha256": "138cb7a4e72d6bc6fd24ca8d91b004d01067633865dd331dd8a694a8ba8cad90",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/dark/practice.svg",
+      "bytes": 409,
+      "sha256": "fbffa83dc0bca9068f993ad7ffbb08f8a251501fee95d6abd791ae3a740c156b",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 320 180"
+    },
+    {
+      "path": "assets/figures/dark/review-card.svg",
+      "bytes": 465,
+      "sha256": "69dca894631106d89b7c5e2b34104c815371a53f02d9ac6b9d489284cf1f059c",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 320 180"
+    },
+    {
+      "path": "assets/figures/dark/right-triangle.svg",
+      "bytes": 695,
+      "sha256": "5a4e66de32bff7a912d041bad06b1251d0781dc160b899a235580c66583f49e1",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/dark/scan.svg",
+      "bytes": 1549,
+      "sha256": "c408fe677ceb1e83ee1a7b986d9c28888a94fcc783eda330a7abc1d11cf043ae",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/dark/theme-thumbnail.svg",
+      "bytes": 562,
+      "sha256": "cbb06bc2fa1e3d0c5eb372be118e2381e5f6ad8aa1e10319408708838dfdc890",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 280 160"
+    },
+    {
+      "path": "assets/figures/dark/timer-card.svg",
+      "bytes": 424,
+      "sha256": "107e397e10203873e02b9f59c30472458a4d7c0b68ae9c47434c992f3f78f4dd",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 320 180"
+    },
+    {
+      "path": "assets/figures/dark/timer-ring.svg",
+      "bytes": 197,
+      "sha256": "c84590879f7880aef7360a2d848ee591c710b73ecbe03c8e304ac56d8b3d76a1",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 440 440"
+    },
+    {
+      "path": "assets/figures/dark/trapezoid.svg",
+      "bytes": 868,
+      "sha256": "051b54ccf4e2942ed3b601ff98740642ef4f9a1ff40e173c32d5c88c511d26b3",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/dark/triangle.svg",
+      "bytes": 754,
+      "sha256": "bfe5bfe97570dcb40ef0c423387dc68b40605ed3e4c03f8a5dd7f86d7e1c9bc4",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/editorial-marks.svg",
+      "bytes": 211,
+      "sha256": "9621b00b477ebc9352412fc3c9ddfe2b237d3e9ff75a6981fef2f5c462648eb9",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 300 100"
+    },
+    {
+      "path": "assets/figures/hero-mask.svg",
+      "bytes": 125,
+      "sha256": "bfd520bc73cd33e8d976e09d9b4d8c38d35076f9ae5130bdb1d7afaf6633ad37",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 1000 400"
+    },
+    {
+      "path": "assets/figures/light/butterfly.svg",
+      "bytes": 862,
+      "sha256": "2c77d5c2858cc4acf8bafe8384461adcd02f23c937291ec92264275ab4edb122",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/light/circle.svg",
+      "bytes": 177,
+      "sha256": "03e71111e89c67d09c6a8b886182ef8fb94f49e19fa7e63b480294c7e7317122",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/light/hexagon.svg",
+      "bytes": 1238,
+      "sha256": "531152826f3a20acea9983a2866d3eb8349a0c070e781347ca78cd396f4274d6",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/light/pentagon.svg",
+      "bytes": 1038,
+      "sha256": "222a7f3acee6027ab79a4e1098a6022e17876a783a28753c0872cd480965b75a",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/light/practice.svg",
+      "bytes": 409,
+      "sha256": "29d5af00068e537ea757af643fba05f262026e827b7cb4fa2df2376fcb405631",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 320 180"
+    },
+    {
+      "path": "assets/figures/light/review-card.svg",
+      "bytes": 465,
+      "sha256": "1c9a58f7767ce296955d094e36e76006aca15c92557527d533958a7dfb500703",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 320 180"
+    },
+    {
+      "path": "assets/figures/light/right-triangle.svg",
+      "bytes": 695,
+      "sha256": "e7b8e547d440fac3e89e47a8e43c57ebb5a813508c35d674a6759b75a7f0b7d2",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/light/scan.svg",
+      "bytes": 1549,
+      "sha256": "1bd7417e68dd6902bdf988ebdc1747c904d76b24050ba0fb96efb82b12ae51f3",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/light/theme-thumbnail.svg",
+      "bytes": 562,
+      "sha256": "1337adb91ed118ad1463f2ef4be001aa17a0288b2b07d2f57a404c939175f203",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 280 160"
+    },
+    {
+      "path": "assets/figures/light/timer-card.svg",
+      "bytes": 424,
+      "sha256": "d5b3225cbdc6609d374ca0ec98e613f896352049d6c0e34ff844838ac5ab18b8",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 320 180"
+    },
+    {
+      "path": "assets/figures/light/timer-ring.svg",
+      "bytes": 197,
+      "sha256": "32a42ecca912ac9cc94fd2c74ec34717d436f88855f88be0f44f67619bf76177",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 440 440"
+    },
+    {
+      "path": "assets/figures/light/trapezoid.svg",
+      "bytes": 868,
+      "sha256": "3b163a4d90ff50c07c5190a005d45a9e1a38733ac3bf2be79e0a5c095f275bfe",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/light/triangle.svg",
+      "bytes": 754,
+      "sha256": "b4c08be40e7206c1c52192d389f1d599c28e80c7900fa041ec3e41e20667d518",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 400 360"
+    },
+    {
+      "path": "assets/figures/signature-underline.svg",
+      "bytes": 221,
+      "sha256": "78413427343c576bbdc28152137d5a18c2921ac44f3cb7fb8d820778d28529f8",
+      "purpose": "可编辑教学示意或装饰矢量",
+      "viewBox": "0 0 160 40"
+    },
+    {
+      "path": "assets/fonts/Caveat-OFL.txt",
+      "bytes": 4385,
+      "sha256": "1f9d81d094273d82f3898a1ee8b598a717d050ecbf5ff7bede105b704880157b",
+      "purpose": "离线字体或许可证"
+    },
+    {
+      "path": "assets/fonts/Caveat-Variable.ttf",
+      "bytes": 403648,
+      "sha256": "0bdb6b660482d31531b3945849fba5916b3ef8695da7024a9e6b9ee3c4157988",
+      "purpose": "离线字体或许可证"
+    },
+    {
+      "path": "assets/fonts/NotoSansSC-Variable.ttf",
+      "bytes": 17772300,
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "purpose": "离线字体或许可证"
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "purpose": "离线字体或许可证"
+    },
+    {
+      "path": "assets/icons/arrow-right.svg",
+      "bytes": 223,
+      "sha256": "b2ded0d65bd80788fd9f97b52ea4ee0a67818c3f24f0a367c3ea89b067b67134",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/bell.svg",
+      "bytes": 242,
+      "sha256": "c997f02128fc0c3aa8da4f6e7b41eaa77951917e0f846310607fdedd7ac38d5f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/book.svg",
+      "bytes": 273,
+      "sha256": "9dd285359250e5bff7c0c5b777367b2a13c9eed85409e669c7f92a574359f2b5",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/check.svg",
+      "bytes": 215,
+      "sha256": "8dc3e771063393447183f087dad757649b2d07d0e60aecd52b3c8b4a743c1ed8",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/chevron-down.svg",
+      "bytes": 213,
+      "sha256": "4943d07055c7f276054d430012a54a2a926517b84e48acfe5c9f299ea52e1961",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/chevron-left.svg",
+      "bytes": 214,
+      "sha256": "4772641aecbdb0260907ef0c022c6e6e93bbdf0f37797543290a1c950754c1dc",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/chevron-right.svg",
+      "bytes": 213,
+      "sha256": "2ad9d65a1ce0335687575479f0800f2cbded550e4b083437f06ab198c164c135",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/close.svg",
+      "bytes": 222,
+      "sha256": "4fd0af0db867029c4355d5e423bd10b0deaf9433a3312cb10d649c8e4e2724ba",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/arrow-right.svg",
+      "bytes": 218,
+      "sha256": "d32d38e6c3e8f2cbe33941d3547699a9f1967f4ed06ce3e3adf8b092e54a9a6a",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/bell.svg",
+      "bytes": 237,
+      "sha256": "553b06640a87131dcdd4d0bb5bb7751c853ea79c40437bbdd7f4f75b49fbc13a",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/book.svg",
+      "bytes": 268,
+      "sha256": "513dc3418a104025a26c2e3d7615f0eb49c0842f8a8b1c066d350e429b1a3a8b",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/check.svg",
+      "bytes": 210,
+      "sha256": "556017a1c0fbf79334785e27df25046165d876a31c7960a04660eb9dd48cd22f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/chevron-down.svg",
+      "bytes": 208,
+      "sha256": "aa158b939594bcf8fbe7e83a6348056f548ccae6458be1fe998ee05c8320adba",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/chevron-left.svg",
+      "bytes": 209,
+      "sha256": "e0c8d5b06e63517bef8e28a171c0515461f546e098e01f3db9b7b3ccfba16649",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/chevron-right.svg",
+      "bytes": 208,
+      "sha256": "b225df71889471f3e3bea0c78ff3b755f815cb0ec129114d4e2c548a5e2d6185",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/close.svg",
+      "bytes": 217,
+      "sha256": "66450aa78380870740c684d3ac1a923a240ddcbaa903304fdb56339f3b9e0ea4",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/database.svg",
+      "bytes": 278,
+      "sha256": "98ce2b2835ed0732144a21ee43ed49d39263aa9e96890a41ff63b1612692e046",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/document.svg",
+      "bytes": 248,
+      "sha256": "03d3a566bee35f565c6f423e43c7e07116345bfcdb4e2fb8190ab16622fe7912",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/download.svg",
+      "bytes": 232,
+      "sha256": "3fb6cbdebf66a67007f50c84d25a1e4bd3690ca62a743e65ae0a290d5825fea7",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/edit.svg",
+      "bytes": 232,
+      "sha256": "c8f161d8b65641755aa6ff20e8738f06fa0e09783dcc607b11e4aa700f68bcdf",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/expand.svg",
+      "bytes": 237,
+      "sha256": "ed460311e7aa51c54f41ba389939b0f0f921762c4439216a0b78d83e7a79c2c1",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/filter.svg",
+      "bytes": 219,
+      "sha256": "a09d67c7061162ed6a1b521584fc53ffdaa8dbf38914b9edce197f1ec32f18bd",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/folder.svg",
+      "bytes": 232,
+      "sha256": "af614acbbac388c1b4ba8b7b863692a1e3a60980ad023704fe05595c797a6df4",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/home.svg",
+      "bytes": 225,
+      "sha256": "d502badf1d302f168dc2e16deb092d044704b22cf98331710d75ff4c40492519",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/image.svg",
+      "bytes": 295,
+      "sha256": "b1164126929c6587505db6f58a74dee8035b6b908fb30ee82bc2bfbfc9457ef4",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/info.svg",
+      "bytes": 245,
+      "sha256": "959c6a12576202c433c45398700f1902c07e45149147a73a2ce13b6a1757df29",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/minus.svg",
+      "bytes": 204,
+      "sha256": "bc15ebdf5c3ab8b7db3a847bc4dac6cd2cc52d3217dc24b28d5976e77d2666e1",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/monitor.svg",
+      "bytes": 262,
+      "sha256": "bd9d467d50eb534751ca39eb30f03182f569bebecbe4b551ff8cf4ba43c88a17",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/moon.svg",
+      "bytes": 233,
+      "sha256": "bc5d3ff28c8d8dd3d95ae136b8f09dee9a7b2183c877b5d5b5ce5978ee001016",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/more.svg",
+      "bytes": 276,
+      "sha256": "55372215b49988065f082a543ee9433981ae9ddcad1ca727f3d65e9819d09be5",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/note.svg",
+      "bytes": 267,
+      "sha256": "e2faddf02294b4da9b81d83eed710f24748425132060778926a6960176a28730",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/pause.svg",
+      "bytes": 229,
+      "sha256": "39de7ebd8190b0556c49f080eabf41f95d3cc334517d6da9b0d07bf538cf1fe2",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/play.svg",
+      "bytes": 211,
+      "sha256": "9aa3b9a423edf36b517c9e617d89257dbb2f4777245516cfbee722330cd3312c",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/plus.svg",
+      "bytes": 213,
+      "sha256": "621e7b4c603fbfa26fcd94f21445ccb4a96e02c8a5ca10f92cb67b92bfe1253f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/random.svg",
+      "bytes": 312,
+      "sha256": "be61ae73937a7f2b4ef4e6c983e55c7a7c94e173ff27910f8e30053be0d004d9",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/reset.svg",
+      "bytes": 223,
+      "sha256": "0162b3f2d328efdbd7065afe2922f38d7c3226e1f0b9fd8bdbc8ed2e6dfef6d8",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/review.svg",
+      "bytes": 304,
+      "sha256": "0591c03bc8798cd787c91bbb6d356f444419e5894aa2895e5493bb7bc5214778",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/search.svg",
+      "bytes": 237,
+      "sha256": "473278d3f435913bd29b0e04253c72fada6897a18edc9ac4af62f04c298b4c1f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/settings.svg",
+      "bytes": 368,
+      "sha256": "09b63037c9eede487b6bb4ea4d3b5782658d4c68b3253cee8f3f2a82745167a9",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/sun.svg",
+      "bytes": 300,
+      "sha256": "f2186dffbee36950686cf07cce3b1dc6e4624f285c08b44c1a00e0c205da59c0",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/timer.svg",
+      "bytes": 263,
+      "sha256": "7dc7129ef02cd4cec4b1c2b7a1ffdf2556f5ecaef7ac44d651101fc928de3e4b",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/trash.svg",
+      "bytes": 248,
+      "sha256": "0c2b6ea60e244a4cc296192da2d16fccff3ecd33a4b13679eddaf69c288f3a50",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/upload.svg",
+      "bytes": 232,
+      "sha256": "211a161237a7a52452ed27b9723c474cbd94d22c947efd2311852210d5a034de",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/dark/warning.svg",
+      "bytes": 229,
+      "sha256": "37d02924daf5972ae3e48b481a71af62246e28611eda9b7bd70c236ed14f6cf6",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/database.svg",
+      "bytes": 283,
+      "sha256": "1e49a1d6915e02cf022a109093ba2985e619983eab3e0e52a4e4f03dfb4ede8e",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/document.svg",
+      "bytes": 253,
+      "sha256": "05792887e877bb400a5ceb020de5ee6830437c67d2af26c80f4fea0680861f49",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/download.svg",
+      "bytes": 237,
+      "sha256": "c4dff6a6720ce10d55737eaee57f045419d34be3ff75f6d2a2c248fb3bc4f662",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/edit.svg",
+      "bytes": 237,
+      "sha256": "c5fe4791a5cf1410425d25a9f8f848af5140dac281eb8b7ee43e5867600c090f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/expand.svg",
+      "bytes": 242,
+      "sha256": "6de05ba928f004f5d2da30d2004cf2b11551dd6693990e81929989640cbcb892",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/filter.svg",
+      "bytes": 224,
+      "sha256": "3d39ee7dc27ad7c34247dd3d3ffc9571af68ac0aa341022917ed85531b492416",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/folder.svg",
+      "bytes": 237,
+      "sha256": "f3fcd1df4e3e341aafd2f54c3ac268deb3ca7457c17c8cbc4c2b9e1e8c53f703",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/home.svg",
+      "bytes": 230,
+      "sha256": "1e7d9a8950547532b7b5cd0d29e6b19e626f9e41a7efdd4cb53172ae92ac5e0f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/image.svg",
+      "bytes": 300,
+      "sha256": "f411bba2af9dae050d3c5bd0dccffd7575f861ce52692747765e158b8015edb6",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/info.svg",
+      "bytes": 250,
+      "sha256": "8a5f5f1d37b1e5cbe77670842cc46a71ff0c3bab6a4050da668fc25319687025",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/arrow-right.svg",
+      "bytes": 218,
+      "sha256": "fd17444916a813b9cddb5f4e17b837cc4904438e45542cd42907aab16d58ae0f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/bell.svg",
+      "bytes": 237,
+      "sha256": "58994c5f77ef433577ea1fd0233f9188edca3a092fa4c86c41518e320d973919",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/book.svg",
+      "bytes": 268,
+      "sha256": "22dbfb8fb57d9d28e64673ad9155f7ff4a3f333549fafc225de8ea6682aaf1d1",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/check.svg",
+      "bytes": 210,
+      "sha256": "27b01b484bc6ba1a49dfe6de942620643b7b52ebbf60cb8c206d3d3f07011102",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/chevron-down.svg",
+      "bytes": 208,
+      "sha256": "3242ae6c9b1343959cf061edad42c091f4751da5aecd228fa30ffce5ec7fb8f0",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/chevron-left.svg",
+      "bytes": 209,
+      "sha256": "a906b00d697865795543e1faa7d8f0740686db5d59fd371c0eea9f8debbbebdb",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/chevron-right.svg",
+      "bytes": 208,
+      "sha256": "30b533053e58ad3813c775007e5df5f08620b5bad1fcb6dfc2c095921da6a80d",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/close.svg",
+      "bytes": 217,
+      "sha256": "4f45122319e5bca86d248d1dd165bd554e14c8fa3e084587e3abf1dea980144b",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/database.svg",
+      "bytes": 278,
+      "sha256": "41c8e21d56c414cd6304fcc2282ed157918ff9ddb40b32a343beb25c4cb26893",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/document.svg",
+      "bytes": 248,
+      "sha256": "bcfe777f23604abdf581061bdc94d89c9ccb44c1705457149ec92cba650e10c3",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/download.svg",
+      "bytes": 232,
+      "sha256": "86da907908b676a95cf291f40a4b72e5978bc8921ce75fa9fc2aa700abb535a0",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/edit.svg",
+      "bytes": 232,
+      "sha256": "19104a858df57a4b9306039841d460d0712d9eec7a9489e73e71536262e45642",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/expand.svg",
+      "bytes": 237,
+      "sha256": "51bf76add3dae851ae658e937fdcdcb419f96acd76aa05b6387d7799e722ef32",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/filter.svg",
+      "bytes": 219,
+      "sha256": "c23685562e16e313e22077fabedd0105aa7bbfafa07981db0e89338ca2884811",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/folder.svg",
+      "bytes": 232,
+      "sha256": "975db0c1716148625cac24c4083526e86069dcca600a6b58d4f82c2c5f0c0c71",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/home.svg",
+      "bytes": 225,
+      "sha256": "fb765e8e1f01f85c3f127c200f1ca7868813b7f07297aafa006be35a7b5a9c64",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/image.svg",
+      "bytes": 295,
+      "sha256": "4f6b388a8cf526b051b5ef2d062abaef7922975f75919487ab5caa5aaf47edc3",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/info.svg",
+      "bytes": 245,
+      "sha256": "ff87b80b2d59f4b7f94e24896380070fdca1a39776e98fd063803992b4d99ab3",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/minus.svg",
+      "bytes": 204,
+      "sha256": "d3070aa86547e6cd6831a51190ac2032c1e0b41acda6b1a47ccee612a3472989",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/monitor.svg",
+      "bytes": 262,
+      "sha256": "5fd5f300aaf9b5a503ba9b7c76e308a5da75a9ca7e039ae81342a49b7c9a548f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/moon.svg",
+      "bytes": 233,
+      "sha256": "5ee84a469eba510563f1a8939a166b4825153f4d829f2ee8e10cbea62502676c",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/more.svg",
+      "bytes": 276,
+      "sha256": "c986bfdf402e8ee3966fb0480467cce2b022c57f44da58b15176bd01440d80b2",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/note.svg",
+      "bytes": 267,
+      "sha256": "642cb6086a0a7a616f973eecd1b217145af873574a6e2c29615d80c9cbc48fce",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/pause.svg",
+      "bytes": 229,
+      "sha256": "5b25fc445e0746025364e6b86a7c01be4984af578b5e7f8a90b5158db40563cb",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/play.svg",
+      "bytes": 211,
+      "sha256": "127613c1f9c235dffce1b152e539625bf867f151ed4dc445a31b5231604613aa",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/plus.svg",
+      "bytes": 213,
+      "sha256": "a9d541f8d20290ac015457e7fc3751623d57db3170dc06cf414ffa2c90b864b4",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/random.svg",
+      "bytes": 312,
+      "sha256": "3cb47a9ccabd371f5c1016b858cae089706fceb95b9d05f2d19737d1abce49fb",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/reset.svg",
+      "bytes": 223,
+      "sha256": "59f04a96d7dd12295a1f8eed09e46c88d8c517cdeddebb6e997cf3a4060ff477",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/review.svg",
+      "bytes": 304,
+      "sha256": "fd2228848ce98bb5cebfa9dc78f872f8c4fd65440c1c6c3ccb4f52161df24e22",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/search.svg",
+      "bytes": 237,
+      "sha256": "2990cf8ebc7e32bc010e271450c64b2cba2fe2e1dba431505e2475477f6e3fc7",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/settings.svg",
+      "bytes": 368,
+      "sha256": "9707309af87c3d04b02412a4a1449e6a2e6037b73724a715d7db83aebc42540b",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/sun.svg",
+      "bytes": 300,
+      "sha256": "1f24d98ef26c48ade2fef49e03ea358e7b3e712646f09e01bd00cb2240a72064",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/timer.svg",
+      "bytes": 263,
+      "sha256": "bbf7fb682aa519229a9494095b529f610359c4b11d12c2fd670afa10e7e44650",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/trash.svg",
+      "bytes": 248,
+      "sha256": "9ff8b7e888e3ce5a41d0a55ec6de7f3d7b42096848ef3839d02c0f6e1f7173ce",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/upload.svg",
+      "bytes": 232,
+      "sha256": "7345759344f7308f0a1e9a7bb89a264e7bd39ba2282267c78012cbc97674e732",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/light/warning.svg",
+      "bytes": 229,
+      "sha256": "61cd08a7af6da3ed39d309f484d2dd212a85ca8097b001c9de04cc59d662e789",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/minus.svg",
+      "bytes": 209,
+      "sha256": "be719dc58dd22c65a79d3a3e9f3d5d0418cb6f4296c27aeaf16629305917d651",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/monitor.svg",
+      "bytes": 267,
+      "sha256": "053c51e6b0e33f24bc7d9b0be705aee0bce484349c4d90737928d3177970fabd",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/moon.svg",
+      "bytes": 238,
+      "sha256": "c05ed6c061f4e86455d890155499fc9d6fcb765cdd87f7a9a23d0541141abe12",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/more.svg",
+      "bytes": 281,
+      "sha256": "d335e0c44ca6ea411251b8ab4fc2267b35ed4b64d97fe02157306f11e22e28a7",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/note.svg",
+      "bytes": 272,
+      "sha256": "f71a69ef1ad08a68e83545f7e52821a0a21d120e5fb9cee115076d2ba3a64aa6",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/arrow-right.svg",
+      "bytes": 218,
+      "sha256": "1a810208d5f12482539c4cec7d2e1eac55905bd5654813b5d2c99f5fee760afa",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/bell.svg",
+      "bytes": 237,
+      "sha256": "dacf547a9a6ba6d0e0a3f6e710d7136df512ae8d1a9704b12555099b32375c6f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/book.svg",
+      "bytes": 268,
+      "sha256": "e73adaea3a1e44d306ade7b0c8f60025d7f8d76480fa781f218d8d4a11e5a4f3",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/check.svg",
+      "bytes": 210,
+      "sha256": "5d64d994914b79e629f548a6bd8ad7b616059f85e13f38f7c6ac8e4d857754b1",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/chevron-down.svg",
+      "bytes": 208,
+      "sha256": "83d8fd7dbaba152517078aee58fdd647e48b905f8c4af0bb615a0072c6ef23c2",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/chevron-left.svg",
+      "bytes": 209,
+      "sha256": "e5352beb53211a7a6e80d4611244b939d9b00078b9089606e2ff7c4bf17169e2",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/chevron-right.svg",
+      "bytes": 208,
+      "sha256": "8e0234a9d1c302c01dcf4ed9641f294514b620a0e3a353808647f485649911ea",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/close.svg",
+      "bytes": 217,
+      "sha256": "b6a705ad7a2fe1ade259e0c0735e9c7ebea4a988aa5413a45bc928d5246d5552",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/database.svg",
+      "bytes": 278,
+      "sha256": "66a043182503e4d96a874d1902de681214c79cee9dfcb0c6f005253e0eb11f9f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/document.svg",
+      "bytes": 248,
+      "sha256": "28f741fb360f7411bfc1940c16a0eb2180ba85087f2eda5862077167459aae80",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/download.svg",
+      "bytes": 232,
+      "sha256": "addb5e2118573b8c6103256606e2c0462702742d81f355e8532a29cb7fdce9af",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/edit.svg",
+      "bytes": 232,
+      "sha256": "eb6321f9fa5bf0b9177ca3cd45eaac6509ba40419ffe15e2fec633b47a7f534e",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/expand.svg",
+      "bytes": 237,
+      "sha256": "090d82973d7a1c89e001fd62b77e7671624cd0906c981486cf66b9fcb01b4dc4",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/filter.svg",
+      "bytes": 219,
+      "sha256": "479641bbe5a5ad46299c84e149d0b0c4525548d44f2e84248eb57d0f290fb7ac",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/folder.svg",
+      "bytes": 232,
+      "sha256": "b8c9a222087c0876117c3fff8eca3025f36ef6323089da4288cbab8a2ac35332",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/home.svg",
+      "bytes": 225,
+      "sha256": "d1315a536929f485aba5da2efa0757a8e4b035b424b313f1527f3762c6f141cd",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/image.svg",
+      "bytes": 295,
+      "sha256": "2d79fb7d928285e27ac3ad487b9990f4278b501bbf1c722ca427cd038ecdde6b",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/info.svg",
+      "bytes": 245,
+      "sha256": "e39c5f843631dad24a89b5f14428bc3870917b2c8abbd2256e22222867f899aa",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/minus.svg",
+      "bytes": 204,
+      "sha256": "f98f1a713efc2845413b03ec8978f1f97db27e455bfe061c72bf59d797bcaf50",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/monitor.svg",
+      "bytes": 262,
+      "sha256": "bb0d77f546a2118350a373929a1ded3590cf34ad7fef87e375ccee3ba1f1fd37",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/moon.svg",
+      "bytes": 233,
+      "sha256": "c7dc6d4fb5e459b581875e3942b4e9130b287e0404ea3c7783d4558b59da277f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/more.svg",
+      "bytes": 276,
+      "sha256": "182f4b118ef73ab695179d8a72e23a47ffcec03e9abb115bdfc662ed5a98fb21",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/note.svg",
+      "bytes": 267,
+      "sha256": "1c67d277a6154ceff24377c2c88bc45b001eacc3d07b8907f1556bbebc9b1dd6",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/pause.svg",
+      "bytes": 229,
+      "sha256": "decb626a161316bfa390c98ef3ff46c97ef0e4185039a07b5f5947a326334f17",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/play.svg",
+      "bytes": 211,
+      "sha256": "88c645464c74598b4f7e0e6c9c61dc576ec68e8b97b1a03d9558b80a219e7db3",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/plus.svg",
+      "bytes": 213,
+      "sha256": "489c14e1619a29e9db234b3015f9a137f1d4a9e5d20eda78e9f3c36fff7307c5",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/random.svg",
+      "bytes": 312,
+      "sha256": "9df9d0c622605260fc4a871d61959e55e9d0808ffbae5d0a0c60464f1815eed4",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/reset.svg",
+      "bytes": 223,
+      "sha256": "5c64fb5820ec70c2e753a6fbca9acd4071f726a2b3eac73f547272de28b9e941",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/review.svg",
+      "bytes": 304,
+      "sha256": "ba0880e88326010f4f61a550f9265e2f66bd021293599db1beb149b097329d3c",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/search.svg",
+      "bytes": 237,
+      "sha256": "45203b7793918d722f824ac58bac6cc112e3e93d2cc6a89c1cea90281ac30fea",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/settings.svg",
+      "bytes": 368,
+      "sha256": "950eeaa3a2802aa9a6446a2b315ce164e36b916b9d5f9f0dd376deaf7e7b2a6e",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/sun.svg",
+      "bytes": 300,
+      "sha256": "87379d7de66f0f1436b4c9edafdd02df1187a6b31763a250ab6032d03f480640",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/timer.svg",
+      "bytes": 263,
+      "sha256": "8441291c4933ffb481d0692e0a1fa02527e4b86f24ea3ffabdb386e39304283e",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/trash.svg",
+      "bytes": 248,
+      "sha256": "8e88bbebf037aa67f5ec248d39fd4ff21fef5103c745051928b372d0f926edb1",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/upload.svg",
+      "bytes": 232,
+      "sha256": "2b94f85b0a81fcace9e6af518489cc802e9f5b01c9f367d2b1fde4cc3a6b0946",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/on-primary/warning.svg",
+      "bytes": 229,
+      "sha256": "7d4e80a2bf79efc61eaeec37c4ee3d5c6e629af861830ba5905e5ac193003097",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/pause.svg",
+      "bytes": 234,
+      "sha256": "d2d76dc2c707328a628c961fdb9eab431c3d85cf8ede958bd2a0c3be04b3fd03",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/play.svg",
+      "bytes": 216,
+      "sha256": "5019543f3d67d565ff59d4f5972369381a7b2bc0dd7d0fb0da87b732b2af3673",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/plus.svg",
+      "bytes": 218,
+      "sha256": "80d799874bd50da5f8609933c56c00b26aa9f7af02428779d9e65f1813b828ab",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/random.svg",
+      "bytes": 317,
+      "sha256": "8d4f2cdf6f3b551b377439f28f24f0ff2ad951a5ce78db3c6b5fdacaf22634c0",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/reset.svg",
+      "bytes": 228,
+      "sha256": "1820634d29b4c9f5e8d8dd70b18cbe3bcca9e85798a657b52e62c43530d0789b",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/review.svg",
+      "bytes": 309,
+      "sha256": "51353a0b9f431b771521fe1219a4705911a72c6312cb78d53979a81aca526e78",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/search.svg",
+      "bytes": 242,
+      "sha256": "3ac44b8c0a8fe97b4db861cb2f11f6d8bbed9c8c44ce24b2c065e277cb83e373",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/settings.svg",
+      "bytes": 373,
+      "sha256": "35ad02b33ead32ea9915c1685df9931486e387698f91e6149ba7b7dff076db9f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/sun.svg",
+      "bytes": 305,
+      "sha256": "c02e7eaf29c1dc94c2734e815e666ff2c76bd23f541bcb50bb6662afccd4fc47",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/timer.svg",
+      "bytes": 268,
+      "sha256": "0722ab43ff19741e4addbe54a267696c091b345496a458d605d8f413cd9f53da",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/trash.svg",
+      "bytes": 253,
+      "sha256": "a937abad7b5a2110091f5abb95f4f8962f7f4f521159e61ac321a079c1c65da7",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/upload.svg",
+      "bytes": 237,
+      "sha256": "8e5a3c8b9572263db456895369e8bbe2d4473255db395115d696483d49ffc48f",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "assets/icons/warning.svg",
+      "bytes": 234,
+      "sha256": "415358d04d9e4f43742e8d68d6432e89515b454d051cb0cd7dd574bb34c59fc7",
+      "purpose": "界面功能图标",
+      "viewBox": "0 0 24 24"
+    },
+    {
+      "path": "components.html",
+      "bytes": 11134,
+      "sha256": "9fe8a30a022cc9174560d9e77aaa2cd109eab49bd8eb5a062c4120b14bff79d0",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "docs/DESIGN.md",
+      "bytes": 3896,
+      "sha256": "c932d7ddbefdd68b5804ce0f198e6f7fc96c129a74e84fc006be223fa37b99ee",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "docs/INTEGRATION.md",
+      "bytes": 3113,
+      "sha256": "c7f75bdfb3330ef8affadb2caaf8bcb3299d6905200cecbff98d365c0257ec8d",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "preview.html",
+      "bytes": 4639,
+      "sha256": "6c1533c629a4c21d003543b980d0de40b535a8f917cd2de44378f16539eae4d0",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "provenance/prompts.json",
+      "bytes": 30829,
+      "sha256": "4faa1ecad82cf16b9296d14edfc431b5b9bdf50c6a261701e40f655b0d241d29",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "provenance/SOURCES.md",
+      "bytes": 1318,
+      "sha256": "304864a30bbe7fb5405eb0328953b27aa7816c62154afa433fc7b453d895d0e7",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1375,
+      "sha256": "248ac09155b765f81bc5b339a1e3852351eb7c534ae53b12f2883284c786b2a8",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "screens/dark/home.png",
+      "bytes": 1954775,
+      "sha256": "7e5cef3188a3853adbd0a8c0c3b0cb616e3e48a739d0476c7db726d821c2ea68",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/dark/question.png",
+      "bytes": 1762053,
+      "sha256": "0d4255c1e79b96f31817ccc86ff8432978f518408974bd1b180fe690dd4adf05",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/dark/settings.png",
+      "bytes": 1703363,
+      "sha256": "5f38238621db7dfa0e4246e220870c4a8cf5cdddc585d2135cc829368198959e",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/dark/teaching.png",
+      "bytes": 1702228,
+      "sha256": "12604796a374eb629cd14668e9ded698cbe5255011d0f523c8ce9c3b3126ed5d",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/dark/timer.png",
+      "bytes": 1701882,
+      "sha256": "1d4f5c5fb67d1938916072b0c2065d3ea4189db8c36f5a911c51a37aa7e47ded",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/light/home.png",
+      "bytes": 1978694,
+      "sha256": "e3791756b3e7118fb4739db5cab575b7fdb49a8e2d8bdbece804f1ec3b53ab5d",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/light/question.png",
+      "bytes": 1667591,
+      "sha256": "2ba555b0954745566be2be5badab8f017524f88dcbb854383c5bd0c41a8dd593",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/light/settings.png",
+      "bytes": 1629145,
+      "sha256": "94cb2673f57f68f322fc0965cba6541b992319415f4463ba9d1183f7a5ad8bf4",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/light/teaching.png",
+      "bytes": 1608163,
+      "sha256": "1f6a56fa01c798ffcf68ddd15aa54b72e6c02a736ff2894c0f001e7c880f2aa4",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1586,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "screens/light/timer.png",
+      "bytes": 1663666,
+      "sha256": "6a8686f67d12156010b74f1c3686a1087cd1d0240ed6abf3512a982278caafa6",
+      "purpose": "页面设计效果图，不作为业务界面贴图",
+      "width": 1585,
+      "height": 992,
+      "colorMode": "RGB"
+    },
+    {
+      "path": "styles/qt-dark.qss",
+      "bytes": 2826,
+      "sha256": "97511106f3facd7214ef892f7b67fd0ba1225a4142f80f76332017db6394ed3c",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "styles/qt-light.qss",
+      "bytes": 2826,
+      "sha256": "57a7776c9e117bd7711e0b81293db42a87f627ec39fd5b0ac2f278b0723965ee",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "styles/theme.css",
+      "bytes": 6660,
+      "sha256": "d44b4e9cee6563915c98f892f66b517cc9953ce7f25632e10031d4ed715a9310",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "tokens/theme.json",
+      "bytes": 2677,
+      "sha256": "c69f334577d7da4f7c082c41e4cf28d4eb6f3d527917b654f2e4ab4551234cf3",
+      "purpose": "前端接入与交付文档"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 1332,
+      "sha256": "e115fc5ec83e161913c26ffa86a722919541fc1bc82eaa36f739fee52b92fc32",
+      "purpose": "前端接入与交付文档"
+    }
+  ]
+}

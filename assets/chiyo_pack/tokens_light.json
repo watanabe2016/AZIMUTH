@@ -1,0 +1,45 @@
+{
+  "theme": "light",
+  "color": {
+    "canvas": "#FFFEFA",
+    "sidebar": "#F7F5F1",
+    "surface": "#FFFFFF",
+    "surfaceRaised": "#F4F2EE",
+    "text": "#252429",
+    "textMuted": "#68666B",
+    "border": "#D7D4D0",
+    "accent": "#E8485D",
+    "accentHover": "#D83C51",
+    "accentSoft": "#FCE8EB",
+    "ink": "#252429",
+    "paper": "#FFFEFA",
+    "disabled": "#C9C7C5",
+    "focus": "#A52F43"
+  },
+  "type": {
+    "ui": "\"Microsoft YaHei UI\", \"Microsoft YaHei\", \"Noto Sans CJK SC\", sans-serif",
+    "display": "\"Microsoft YaHei UI\", \"Microsoft YaHei\", sans-serif",
+    "mono": "\"Cascadia Code\", \"Consolas\", monospace"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "6px",
+    "lg": "10px"
+  },
+  "spacing": {
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "24px",
+    "6": "32px",
+    "7": "40px"
+  },
+  "layout": {
+    "sidebarWidth": "208px",
+    "titlebarHeight": "48px",
+    "statusbarHeight": "40px",
+    "contentPadding": "24px",
+    "panelGap": "12px"
+  }
+}

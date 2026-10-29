@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-labelledby="title desc">
+  <title id="title">六边形航线图</title>
+  <desc id="desc">六个依序编号的航点组成闭合六边形，第一航点以红色突出。</desc>
+  <path d="M210 42 335 112v96l-125 70-125-70v-96z" fill="none" stroke="#15191c" stroke-width="3"/>
+  <g font-family="Consolas,monospace" font-size="15" font-weight="700" text-anchor="middle">
+    <circle cx="210" cy="42" r="17" fill="#f1342d"/><text x="210" y="48" fill="#fff">1</text>
+    <circle cx="335" cy="112" r="15" fill="#fff" stroke="#15191c" stroke-width="2"/><text x="335" y="118" fill="#15191c">2</text>
+    <circle cx="335" cy="208" r="15" fill="#fff" stroke="#15191c" stroke-width="2"/><text x="335" y="214" fill="#15191c">3</text>
+    <circle cx="210" cy="278" r="15" fill="#fff" stroke="#15191c" stroke-width="2"/><text x="210" y="284" fill="#15191c">4</text>
+    <circle cx="85" cy="208" r="15" fill="#fff" stroke="#15191c" stroke-width="2"/><text x="85" y="214" fill="#15191c">5</text>
+    <circle cx="85" cy="112" r="15" fill="#fff" stroke="#15191c" stroke-width="2"/><text x="85" y="118" fill="#15191c">6</text>
+  </g>
+  <path d="M210 15v13M183 42h13M224 42h13" stroke="#f1342d" stroke-width="1.5"/>
+</svg>

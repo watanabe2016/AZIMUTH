@@ -1,0 +1,25 @@
+/* 在主题根窗口设置 annaTheme=true；其余角色属性参照接入文档。 */
+QWidget[annaTheme="true"] { background:#FFFCF5; color:#202D48; font-family:"Noto Sans SC","Microsoft YaHei"; font-size:15px; }
+QWidget[annaTheme="true"] QWidget { color:#202D48; }
+QWidget[annaTheme="true"] QWidget[annaRole="panel"] { background:#FFFFFF; border:1px solid #D6DDEC; border-radius:12px; }
+QWidget[annaTheme="true"] QWidget[annaRole="sidebar"] { background:#FFFDF8; border-right:1px solid #D6DDEC; }
+QWidget[annaTheme="true"] QLabel { background:transparent; border:none; }
+QWidget[annaTheme="true"] QLabel[annaRole="title"] { font-size:32px; font-weight:800; }
+QWidget[annaTheme="true"] QLabel[annaRole="muted"] { color:#5C6880; }
+QWidget[annaTheme="true"] QPushButton { min-height:24px; padding:9px 18px; background:#FFFFFF; color:#202D48; border:1px solid #74819B; border-radius:8px; font-weight:600; }
+QWidget[annaTheme="true"] QPushButton:hover { background:#F0F4FC; }
+QWidget[annaTheme="true"] QPushButton[annaRole="primary"], QWidget[annaTheme="true"] QPushButton:checked { background:#315BC4; color:#FFFFFF; border-color:#315BC4; }
+QWidget[annaTheme="true"] QPushButton[annaRole="primary"]:hover { background:#264BA7; }
+QWidget[annaTheme="true"] QPushButton:focus { border:2px solid #315BC4; }
+QWidget[annaTheme="true"] QPushButton:disabled { color:#66728A; background:#E8ECF2; border-color:#D6DDEC; }
+QWidget[annaTheme="true"] QLineEdit, QWidget[annaTheme="true"] QComboBox, QWidget[annaTheme="true"] QSpinBox { min-height:26px; padding:8px 12px; background:#FFFFFF; border:1px solid #74819B; border-radius:8px; color:#202D48; selection-background-color:#315BC4; selection-color:white; }
+QWidget[annaTheme="true"] QLineEdit:focus { border:2px solid #315BC4; }
+QWidget[annaTheme="true"] QTextEdit, QWidget[annaTheme="true"] QPlainTextEdit, QWidget[annaTheme="true"] QAbstractItemView { background:#FFFFFF; color:#202D48; border:1px solid #D6DDEC; border-radius:8px; selection-background-color:#315BC4; selection-color:white; }
+QWidget[annaTheme="true"] QCheckBox { spacing:10px; background:transparent; }
+QWidget[annaTheme="true"] QCheckBox::indicator { width:20px; height:20px; border:1px solid #74819B; border-radius:4px; background:#FFFFFF; }
+QWidget[annaTheme="true"] QCheckBox::indicator:checked { background:#315BC4; image:url(assets/icons/on-primary/check.svg); border-color:#315BC4; }
+QWidget[annaTheme="true"] QScrollBar:vertical { width:10px; background:#FFFFFF; border:none; }
+QWidget[annaTheme="true"] QScrollBar::handle:vertical { background:#74819B; min-height:32px; border-radius:5px; }
+QWidget[annaTheme="true"] QScrollBar::add-line:vertical,QWidget[annaTheme="true"] QScrollBar::sub-line:vertical { height:0; }
+QWidget[annaTheme="true"] QWidget[annaRole="paper"] { background:white; color:#202D48; }
+

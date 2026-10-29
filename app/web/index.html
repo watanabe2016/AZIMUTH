@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" class="home-pending">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ececeb">
+  <title>AZIMUTH · 学习首页</title>
+  <link rel="stylesheet" href="industrial.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #ececeb;
+      --ink: #20242a;
+      --copy: #59616b;
+      --muted: #59616b;
+      --blue: #1a56c4;
+      --line: rgba(31, 39, 49, .12);
+      --gutter: clamp(24px, 4.2vw, 64px);
+      --radius: 17px;
+      --ease: cubic-bezier(.4, 0, .2, 1);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; min-height: 100%; }
+    body {
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 18% 12%, rgba(255,255,255,.72), transparent 39%),
+        radial-gradient(rgba(44, 51, 59, .055) .7px, transparent .7px) 0 0 / 6px 6px,
+        var(--paper);
+      font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      scrollbar-color: rgba(65, 76, 90, .35) transparent;
+      scrollbar-width: thin;
+    }
+    button { color: inherit; font: inherit; }
+    button:focus-visible { outline: 3px solid rgba(26, 86, 196, .65); outline-offset: 3px; }
+    ::selection { background: rgba(26, 86, 196, .22); color: #15263c; }
+    .stage { min-height: 100%; padding: clamp(27px, 5.3vh, 58px) var(--gutter) 30px; }
+    html.home-pending #stage { visibility: hidden; }
+    html.motion-off.home-pending #stage { visibility: visible; }
+    @media (prefers-reduced-motion: reduce) {
+      html.home-pending #stage { visibility: visible; }
+    }
+    .content { width: min(100%, 1380px); margin: 0 auto; }
+    .masthead {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(260px, .58fr);
+      align-items: start;
+      gap: clamp(26px, 6vw, 94px);
+      margin-bottom: clamp(38px, 6.2vh, 74px);
+    }
+    .chiyo-cover {
+      display: none;
+      position: absolute;
+      z-index: 0;
+      inset: 0 0 0 auto;
+      width: 52%;
+      height: 100%;
+      pointer-events: none;
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+    }
+    .anna-cover {
+      display:none; position:absolute; z-index:1; inset:0 0 0 auto; width:55%;
+      height:100%; pointer-events:none; background-repeat:no-repeat;
+      background-size:contain; background-position:right bottom;
+    }
+    .anna-home-motifs { display:none; }
+    .flight-guide { position:absolute; left:0; top:0; width:27px; height:27px;
+      z-index:3; color:var(--blue); pointer-events:none; opacity:0; }
+    .flight-guide path { fill:var(--paper); stroke:currentColor; stroke-width:1.5;
+      stroke-linecap:round; stroke-linejoin:round; }
+    .masthead h1, .masthead .intro { position: relative; z-index: 1; }
+    h1 {
+      margin: 0;
+      max-width: 720px;
+      font-size: clamp(33px, 4.15vw, 59px);
+      line-height: 1.14;
+      letter-spacing: -.045em;
+      font-weight: 500;
+    }
+    h1 .accent { color: #b54267; font-weight: 650; }
+    .intro { max-width: 490px; padding-top: 8px; color: var(--copy); font-size: 15px; line-height: 1.85; }
+    .intro p { margin: 0 0 18px; }
+    .intro .start-link {
+      display: inline-flex; align-items: center; gap: 9px; border: 0; padding: 0;
+      color: var(--blue); background: transparent; font-weight: 650; cursor: pointer;
+      transition: color .2s ease;
+    }
+    .start-link:hover { color: #10439f; }
+    .arrow { width: 16px; height: 16px; transition:transform .24s var(--ease); }
+    .start-link:hover .arrow { transform:translateX(4px); }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.5vw, 23px); }
+    .card {
+      position: relative; isolation: isolate; overflow: hidden; min-height: 385px;
+      border: 1px solid rgba(255,255,255,.48); border-radius: var(--radius);
+      color: #fff; display: flex; flex-direction: column; align-items: center;
+      text-align: center; padding: 30px 24px 25px;
+      box-shadow: 0 13px 30px rgba(38, 43, 52, .09), 0 2px 5px rgba(38,43,52,.08);
+      transform: translateY(0) scale(1);
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .card:hover { transform: translateY(-2px); box-shadow: 0 17px 34px rgba(38,43,52,.15), 0 3px 8px rgba(38,43,52,.09); }
+    }
+    .card:active { transform: translateY(0) scale(.985); }
+    .card--rose { background: linear-gradient(150deg, #ba4967 0%, #aa3b5d 54%, #8a2e4e 100%); }
+    .card--violet { background: linear-gradient(148deg, #7753a1 0%, #69458f 53%, #50346f 100%); }
+    .card--orange { background: linear-gradient(145deg, #c14a29 0%, #a83720 54%, #8b2c1b 100%); }
+    .card::before {
+      position: absolute; z-index: -1; content: ""; inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), transparent 38%, rgba(35,12,23,.12));
+      pointer-events: none;
+    }
+    .card::after {
+      position:absolute; z-index:0; inset:0; content:""; pointer-events:none;
+      opacity:0; transition:opacity .24s ease;
+      background:radial-gradient(ellipse 62% 48% at var(--light-x,50%) var(--light-y,35%), rgba(255,255,255,.20), transparent 76%);
+    }
+    .card:hover::after { opacity:1; }
+    .card > * { position:relative; z-index:1; }
+    .visual { transition:transform .3s var(--ease); transform:translate(var(--visual-x,0px),var(--visual-y,0px)); }
+    .card__title { margin: 0; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.55; font-weight: 650; }
+    .card__subtitle { margin: 3px 0 0; font-size: 14px; line-height: 1.5; color: #fff; }
+    .visual { width: 100%; height: 158px; margin: 16px 0 10px; position: relative; display: grid; place-items: center; }
+    .metric { position:absolute; z-index:2; left:50%; bottom:0; display:flex; align-items:baseline; gap:7px; white-space:nowrap; transform:translateX(-50%); }
+    .metric__number { font-size: clamp(43px, 5vw, 70px); line-height: 1; font-weight: 400; font-variant-numeric: tabular-nums; letter-spacing: -.05em; }
+    .metric__unit { font-size: 17px; color: rgba(255,255,255,.9); }
+    .card__caption { max-width: 235px; min-height: 47px; margin: 0 auto 17px; color: #fff; font-size: 14px; line-height: 1.7; }
+    .card__action {
+      min-width: 114px; min-height: 40px; padding: 9px 19px; border: 1px solid rgba(255,255,255,.9);
+      border-radius: 999px; color: #30343a; background: rgba(255,255,255,.94); font-size: 13px; font-weight: 600;
+      cursor: pointer; box-shadow: 0 2px 5px rgba(34,31,36,.08);
+      transition: transform .22s var(--ease), background .22s ease, box-shadow .22s ease;
+    }
+    .card__action:hover { transform: translateY(-1px) scale(1.03); background: #fff; box-shadow: 0 5px 12px rgba(34,31,36,.15); }
+    html[data-app-theme="default"] .card__action { border-radius:12px; min-height:44px; font-size:14px; }
+    .card__action:active { transform: translateY(0) scale(.98); box-shadow:0 1px 3px rgba(34,31,36,.12); }
+    .card__action:disabled { cursor:not-allowed; color:rgba(255,255,255,.88); background:rgba(255,255,255,.18); border-color:rgba(255,255,255,.36); box-shadow:none; }
+    .gauge { width: min(190px, 72%); height: 104px; overflow: visible; position: absolute; top: -3px; }
+    .gauge path, .gauge line { fill: none; stroke: rgba(255,255,255,.35); stroke-width: 1; }
+    .gauge .needle { stroke: rgba(255,255,255,.82); stroke-width: 1.5; transform-origin: 50% 100%; }
+    .question-art { position: absolute; right: 8%; top: 0; width: 78%; height: 102px; border: 1px solid rgba(255,255,255,.3); border-radius: 9px; background: linear-gradient(135deg,rgba(255,255,255,.25),rgba(255,255,255,.07)); transform: rotate(-2deg); }
+    .question-art::before, .question-art::after { content:""; position:absolute; left:12%; height:5px; border-radius:5px; background:rgba(255,255,255,.55); }
+    .question-art::before { top:18px; width:38%; }
+    .question-art::after { top:32px; width:70%; opacity:.55; }
+    .question-art .blocks { position:absolute; left:12%; right:12%; bottom:18px; display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+    .question-art .blocks i { height:26px; border:1px solid rgba(255,255,255,.5); border-radius:4px; background:rgba(255,255,255,.16); }
+    .map { position:absolute; inset:0 0 auto; width:100%; height:94px; }
+    .map path { fill:none; stroke:rgba(255,255,255,.62); stroke-width:1.25; stroke-dasharray:700; stroke-dashoffset:0; }
+    .map circle { fill:#ffe5a1; stroke:rgba(255,255,255,.55); stroke-width:1; transform-box:fill-box; transform-origin:center; }
+    .question-art { transition:transform .36s var(--ease); }
+    .card--violet:hover .question-art { transform:translateY(-4px) rotate(-1deg); }
+    .footnote { margin: 20px 2px 0; color: var(--muted); font-size: 12px; }
+    [data-theme="dark"] {
+      color-scheme: dark; --paper:#0e1622; --ink:#eaf1fa; --copy:#a9b9ce; --muted:#95a5b8; --line:rgba(210,225,245,.15);
+    }
+    [data-theme="dark"] body { color:var(--ink); background:radial-gradient(ellipse at 20% 0%,rgba(40,62,89,.42),transparent 44%),radial-gradient(rgba(202,218,238,.08) .7px,transparent .7px) 0 0 / 6px 6px,var(--paper); }
+    [data-theme="dark"] .card { border-color:rgba(255,255,255,.14); box-shadow:0 13px 30px rgba(0,0,0,.23),0 2px 5px rgba(0,0,0,.15); }
+    [data-theme="dark"] .intro .start-link { color:#a9c5ff; }
+    [data-theme="dark"] .intro .start-link:hover { color:#d1e0ff; }
+    [data-app-theme="chiyo"] {
+      --blue:#E8485D;
+      --radius:3px;
+    }
+    .chiyo-only { display:none; }
+    [data-app-theme="chiyo"][data-theme="light"] {
+      --paper:#fffdf8; --ink:#25262c; --copy:#303139; --muted:#65616a;
+      --blue:#ed4058; --line:#b8b2af;
+    }
+    [data-app-theme="chiyo"][data-theme="dark"] {
+      --paper:#202329; --ink:#eee8df; --copy:#e2dcd4; --muted:#beb7b0;
+      --blue:#f04a61; --line:#77747b;
+    }
+    [data-app-theme="chiyo"] body { background:var(--paper); }
+    [data-app-theme="chiyo"] .stage { padding:0 10px 10px; background:none; }
+    [data-app-theme="chiyo"] .content { width:100%; max-width:none; }
+    [data-app-theme="chiyo"] .chiyo-only { display:block; }
+    [data-app-theme="chiyo"] .masthead {
+      display:block; height:clamp(260px,34vh,312px); margin:0 -10px 12px;
+      overflow:hidden; isolation:isolate; border-bottom:2px solid var(--ink);
+      background:var(--paper);
+    }
+    [data-app-theme="chiyo"] .masthead::before {
+      content:""; position:absolute; inset:0; z-index:0;
+      background:radial-gradient(var(--ink) .8px,transparent 1px) 0 0/5px 5px;
+      mask-image:linear-gradient(125deg,#000 0%,transparent 43%,#000 100%);
+      opacity:.25;
+    }
+    [data-app-theme="chiyo"] .cover-panel {
+      position:absolute; z-index:0; left:18px; top:24px; width:48%; height:80%;
+      background:var(--paper); border:2px solid var(--ink); transform:rotate(-3deg);
+      box-shadow:5px 5px 0 -3px var(--paper),6px 6px 0 -3px var(--ink);
+    }
+    [data-app-theme="chiyo"] .cover-papers {
+      position:absolute; z-index:0; right:-30px; bottom:-46px; width:52%; height:114%;
+      background:var(--home-paper-stack) right bottom/contain no-repeat;
+      opacity:.56; mix-blend-mode:multiply;
+    }
+    [data-app-theme="chiyo"][data-theme="dark"] .cover-papers {
+      filter:grayscale(1) invert(1); mix-blend-mode:screen; opacity:.3;
+    }
+    [data-app-theme="chiyo"] .masthead .chiyo-cover {
+      display:block; z-index:1; width:58%; height:112%; top:-4%; bottom:auto;
+      background-size:contain; background-position:right bottom;
+    }
+    [data-app-theme="chiyo"] .masthead h1 {
+      position:absolute; z-index:2; left:clamp(30px,3.7vw,54px); top:43px;
+      max-width:49%; font-size:clamp(38px,4.45vw,66px); line-height:1.13;
+      font-weight:900; letter-spacing:-.03em;
+    }
+    [data-app-theme="chiyo"] h1 .accent { color:var(--blue); }
+    [data-app-theme="chiyo"] .masthead .intro {
+      position:absolute; z-index:2; left:clamp(33px,3.8vw,56px); top:clamp(175px,23.5vh,217px);
+      max-width:42%; padding:0; color:var(--ink); font-size:18px; line-height:1.5;
+      font-weight:650;
+    }
+    [data-app-theme="chiyo"] .intro p { margin:0 0 5px; }
+    [data-app-theme="chiyo"] .intro p:not(:first-child) { display:none; }
+    [data-app-theme="chiyo"] .intro .start-link { color:var(--blue); font-size:13px; }
+    [data-app-theme="chiyo"] .cover-note {
+      position:absolute; z-index:3; left:46%; top:5px; width:150px; height:155px;
+      transform:rotate(-5deg); color:var(--ink);
+    }
+    [data-app-theme="chiyo"] .cover-note::before {
+      content:""; position:absolute; inset:0;
+      background:var(--home-cover-note) center/contain no-repeat;
+      mix-blend-mode:multiply;
+    }
+    [data-app-theme="chiyo"][data-theme="dark"] .cover-note::before {
+      filter:grayscale(1) invert(1); mix-blend-mode:screen;
+    }
+    [data-app-theme="chiyo"] .cover-note span {
+      display:block; position:absolute; top:38px; left:25px; right:20px;
+      font:14px/1.6 "KaiTi","STKaiti",serif; transform:rotate(-4deg);
+    }
+    [data-app-theme="chiyo"] .cover-dialog {
+      position:absolute; z-index:3; right:19px; top:16px; width:173px;
+      padding:15px 10px; border:2px solid var(--ink); border-radius:50% 47% 43% 42%;
+      background:var(--paper); color:var(--ink); text-align:center;
+      font:700 19px/1.5 "KaiTi","STKaiti",serif; transform:rotate(3deg);
+    }
+    [data-app-theme="chiyo"] .cover-dialog::after {
+      content:""; position:absolute; bottom:-10px; left:26px; width:18px; height:18px;
+      background:var(--paper); border-left:2px solid var(--ink); border-bottom:2px solid var(--ink);
+      transform:skew(-17deg) rotate(-24deg);
+    }
+    [data-app-theme="chiyo"] .cover-editor-label {
+      position:absolute; z-index:2; left:45%; bottom:12px; padding:6px 12px;
+      border:1px solid var(--ink); background:var(--paper); transform:rotate(-6deg);
+      font:14px/1.55 "KaiTi","STKaiti",serif;
+    }
+    [data-app-theme="chiyo"] .cards { gap:12px; }
+    [data-app-theme="chiyo"] .card {
+      color:var(--ink); background:var(--paper); border:2px solid var(--ink);
+      border-radius:0; min-height:clamp(450px,57vh,524px); padding:20px 18px 22px;
+      box-shadow:3px 3px 0 -1px var(--paper),4px 4px 0 -1px var(--ink);
+      transition:box-shadow .3s var(--ease);
+    }
+    [data-app-theme="chiyo"] .card:hover,
+    [data-app-theme="chiyo"] .card:active { transform:none; }
+    [data-app-theme="chiyo"] .card::before {
+      content:""; position:absolute; inset:0; z-index:0; opacity:1; transform:none;
+      background:radial-gradient(rgba(237,64,84,.64) .8px,transparent 1px) 0 0/5px 5px;
+      mask-image:radial-gradient(ellipse 112px 100px at top left,#000,transparent),
+        radial-gradient(ellipse 100px 95px at bottom right,#000,transparent);
+    }
+    [data-app-theme="chiyo"] .card::after {
+      content:attr(data-number); display:block; position:absolute; inset:0 auto auto 0;
+      width:56px; height:44px; z-index:3; padding:4px 0 0 8px;
+      color:#fff; background:linear-gradient(#f55465,#e72e48);
+      clip-path:polygon(0 0,100% 0,78% 100%,0 100%);
+      font-size:25px; font-weight:850; text-align:left; opacity:1;
+    }
+    [data-app-theme="chiyo"] .card__title { font-size:30px; line-height:1.3; font-weight:850; }
+    [data-app-theme="chiyo"] .card__subtitle { color:var(--copy); font-size:16px; margin:7px 0 0; }
+    [data-app-theme="chiyo"] .visual {
+      height:clamp(180px,23.5vh,216px); margin:12px 0 9px; transform:none;
+      border:0; border-radius:0; background:none; box-shadow:none;
+    }
+    [data-app-theme="chiyo"] .visual > svg:not(.chiyo-only),
+    [data-app-theme="chiyo"] .visual > .question-art { display:none; }
+    [data-app-theme="chiyo"] .chiyo-illustration {
+      position:absolute; inset:-6px 24% 60px -6px; z-index:0; background-position:center;
+      background-repeat:no-repeat; background-size:contain; mix-blend-mode:multiply;
+    }
+    [data-app-theme="chiyo"] .card--rose .chiyo-illustration { background-image:var(--home-bank-art); }
+    [data-app-theme="chiyo"] .card--violet .chiyo-illustration { background-image:var(--home-timer-art); inset:0 25% 63px 0; }
+    [data-app-theme="chiyo"] .card--orange .chiyo-illustration { background-image:var(--home-review-art); }
+    [data-app-theme="chiyo"][data-theme="dark"] .chiyo-illustration {
+      filter:grayscale(1) invert(1); mix-blend-mode:screen; opacity:.85;
+    }
+    [data-app-theme="chiyo"] .card-scribble {
+      position:absolute; right:0; top:33px; width:28%; color:var(--ink);
+      font:15px/1.6 "KaiTi","STKaiti",serif; transform:rotate(-8deg); text-align:left;
+    }
+    [data-app-theme="chiyo"] .card-scribble::after {
+      content:""; display:block; height:2px; width:88%; margin-top:4px;
+      background:var(--blue); transform:rotate(-5deg);
+    }
+    [data-app-theme="chiyo"] .card--orange .card-scribble { color:var(--blue); }
+    [data-app-theme="chiyo"] .review-mark {
+      position:absolute; left:37%; top:28px; width:73px; height:47px; color:var(--blue);
+    }
+    [data-app-theme="chiyo"] .home-binder {
+      position:absolute; left:17%; top:0; width:32px; height:34px; transform:rotate(-6deg);
+    }
+    [data-app-theme="chiyo"] .review-sticky {
+      position:absolute; top:10px; right:8px; width:72px; padding:10px 7px 8px;
+      color:#443b2b; background:#fff0c7; border:1px solid #27262a;
+      transform:rotate(-7deg); font:11px/1.6 "KaiTi","STKaiti",serif;
+    }
+    [data-app-theme="chiyo"][data-theme="dark"] .review-sticky { background:#35312c; color:#f0d5a4; border-color:#aaa096; }
+    [data-app-theme="chiyo"] .metric__number { color:var(--blue); font-size:clamp(62px,6.6vw,90px); line-height:1; font-weight:850; letter-spacing:-.03em; }
+    [data-app-theme="chiyo"] .metric__unit { color:var(--ink); font-size:20px; font-weight:700; }
+    [data-app-theme="chiyo"] .card__caption { color:var(--copy); max-width:320px; min-height:51px; font-size:16px; line-height:1.65; margin-bottom:16px; }
+    [data-app-theme="chiyo"] .card__action {
+      color:#fff; min-width:75%; min-height:52px; margin-top:auto; font-size:17px;
+      font-weight:750; border:1px solid #da2a44; border-radius:6px;
+      background:linear-gradient(#f45167,#e73b54); box-shadow:inset 0 1px 0 #ffffff65,0 3px 5px #24252b18;
+      transition:transform .22s var(--ease),box-shadow .22s var(--ease),background .22s ease;
+    }
+    [data-app-theme="chiyo"] .card--violet .card__action { background:linear-gradient(#2c3038,#1c2027); border-color:#1b1e23; }
+    [data-app-theme="chiyo"][data-theme="dark"] .card--violet .card__action { border-color:#d8d1c7; }
+    [data-app-theme="chiyo"] .card__action:hover { transform:translateY(-1px); box-shadow:inset 0 1px 0 #ffffff65,0 4px 8px #24252b22; }
+    [data-app-theme="chiyo"] .card__action:active { transform:translateY(1px); box-shadow:inset 0 1px 3px #27252b30,0 1px 2px #24252b14; }
+    [data-app-theme="chiyo"] .card__action:disabled { color:#f9f7f4; background:#c5c4c7; border-color:#c5c4c7; box-shadow:none; opacity:1; }
+    [data-app-theme="chiyo"][data-theme="dark"] .card__action:disabled { background:#42454d; border-color:#62646b; color:#bdbdc5; }
+    [data-app-theme="chiyo"] .home-footer-note { display:flex; gap:22px; align-items:center; padding:5px 2px; }
+    [data-app-theme="chiyo"] .footnote { flex:1; color:var(--copy); margin:10px 0; font-size:14px; }
+    [data-app-theme="chiyo"] .footer-encouragement { color:var(--blue); font:17px/1.5 "KaiTi","STKaiti",serif; white-space:nowrap; }
+    [data-app-theme="chiyo"] button:focus-visible { outline-color:var(--blue); outline-offset:4px; }
+    [data-app-theme="chiyo"] ::selection { background:#ed40584a; color:var(--ink); }
+    [data-app-theme="anna"] {
+      --blue:#1769E8; --radius:12px;
+    }
+    [data-app-theme="anna"][data-theme="light"] {
+      --paper:#F4F8FE; --ink:#102B5D; --copy:#536B91; --muted:#536B91;
+      --line:#D6E3F5; --blue:#1769E8;
+    }
+    [data-app-theme="anna"][data-theme="dark"] {
+      --paper:#101827; --ink:#F3F5FB; --copy:#B4C0D5; --muted:#B4C0D5;
+      --line:#3C4E6C; --blue:#5FA1FF;
+    }
+    [data-app-theme="anna"] body { background:var(--paper); }
+    [data-app-theme="anna"] body { font-family:"Anna Noto","Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif; }
+    [data-app-theme="anna"] .stage { min-height:100%; padding:0 0 14px; }
+    [data-app-theme="anna"] .content { width:100%; max-width:none; }
+    [data-app-theme="anna"] .masthead {
+      display:block; position:relative; width:100%; aspect-ratio:1358 / 520;
+      height:auto;
+      margin:0; overflow:hidden; isolation:isolate; border:0; border-radius:0;
+      container-type:inline-size;
+      background:var(--anna-home-reference) 100% 10.6%/116.64% auto no-repeat;
+    }
+    [data-app-theme="anna"] .masthead::before {
+      content:none; display:none;
+    }
+    [data-app-theme="anna"][data-theme="dark"] .masthead {
+      background:var(--anna-home-reference) 100% 10.6%/116.64% auto no-repeat;
+    }
+    [data-app-theme="anna"] .anna-home-motifs {
+      display:none; position:absolute; inset:0; width:100%; height:100%; z-index:1;
+      pointer-events:none; clip-path:inset(0 58% 0 0);
+    }
+    [data-app-theme="anna"] .anna-home-motifs .dots { fill:url(#anna-home-dots); }
+    [data-app-theme="anna"] .anna-home-motifs .sun { fill:#FFE943; }
+    [data-app-theme="anna"] .anna-home-motifs .rose { fill:#F33E88; }
+    [data-app-theme="anna"] .anna-home-motifs .blue { fill:#198CF4; }
+    [data-app-theme="anna"] .anna-home-motifs .outline {
+      fill:none; stroke:#FFE943; stroke-width:8; stroke-linejoin:round;
+    }
+    [data-app-theme="anna"] .anna-home-motifs .scribble {
+      fill:none; stroke:#1E82F3; stroke-width:5; stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    [data-app-theme="anna"] .anna-cover {
+      display:none;
+    }
+    @keyframes anna-character-float {
+      0%,100% { translate:0 0; rotate:0deg; }
+      50% { translate:0 -5px; rotate:-.35deg; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      [data-app-theme="anna"] .anna-cover { animation:none; }
+    }
+    [data-app-theme="anna"] .masthead h1 {
+      position:absolute; left:2.7%; top:10%; z-index:3;
+      max-width:43%; font-size:clamp(42px,7.4cqw,104px); line-height:.96;
+      letter-spacing:-.045em; font-weight:900; color:var(--ink);
+      opacity:1; pointer-events:none;
+    }
+    [data-app-theme="anna"] .masthead h1 .headline-line {
+      display:inline-block; white-space:nowrap; font-size:.70em; line-height:1.1;
+    }
+    [data-app-theme="anna"] h1 .accent { position:relative; color:var(--blue); }
+    [data-app-theme="anna"] h1 .accent::after {
+      content:none;
+    }
+    [data-app-theme="anna"] .masthead .intro {
+      position:absolute; inset:0; z-index:3; max-width:none;
+      padding:0; color:var(--copy);
+      font-size:22px; line-height:1.5; pointer-events:none;
+    }
+    [data-app-theme="anna"] .intro p { opacity:1; pointer-events:none; }
+    [data-app-theme="anna"] .hero-subtitle {
+      position:absolute; left:2.7%; top:54.5%; width:32%; margin:0;
+      font-size:clamp(16px,2.1cqw,29px); line-height:1.4;
+    }
+    [data-app-theme="anna"] .hero-subtitle span { display:block; }
+    [data-app-theme="anna"] .intro p:nth-of-type(2) { display:none; }
+    [data-app-theme="anna"] .intro .start-link {
+      display:flex; position:absolute; left:2.7%; top:72.7%;
+      width:22.3%; height:12.5%; min-height:0; margin:0;
+      align-items:center; justify-content:center; gap:18px; padding:0 12px;
+      border:0; border-radius:999px; color:#fff; background:#0963EA;
+      box-shadow:none; font-size:clamp(16px,1.62vw,22px); font-weight:750;
+      transition:transform .22s var(--ease),background .22s ease; pointer-events:auto;
+    }
+    [data-app-theme="anna"] .start-link .arrow { width:22px; height:22px; }
+    @media (hover:hover) and (pointer:fine) {
+      [data-app-theme="anna"] .intro .start-link:hover { transform:translateY(-2px); background:#0C5CD8; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      [data-app-theme="anna"] .intro .start-link:hover { transform:none; }
+    }
+    [data-app-theme="anna"][data-theme="dark"] .intro .start-link { background:#1769E8; }
+    [data-app-theme="anna"] .cards { gap:14px; margin:0 20px; }
+    [data-app-theme="anna"] .card {
+      min-height:clamp(274px,24.5vw,332px); border-radius:13px;
+      color:var(--ink); padding:22px 28px 20px; align-items:stretch;
+      text-align:left; background:#FFFFFF; border:1px solid #E4EDF9;
+      box-shadow:0 5px 13px rgba(35,66,118,.07);
+      transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+    }
+    [data-app-theme="anna"][data-theme="dark"] .card {
+      color:#F3F5FB; background:#15243D; border-color:#2B4770;
+      box-shadow:0 7px 17px rgba(0,0,0,.14);
+    }
+    [data-app-theme="anna"] .anna-card-motifs {
+      position:absolute !important; inset:0; z-index:0 !important;
+      pointer-events:none; overflow:hidden;
+    }
+    [data-app-theme="anna"] .anna-card-motifs::before {
+      content:""; position:absolute; top:20px; right:20px; width:72px; height:48px;
+      background:radial-gradient(circle,rgba(32,128,244,.52) 1.25px,transparent 1.6px) 0 0/9px 9px;
+      mask-image:linear-gradient(135deg,transparent 0%,#000 45%,#000 100%);
+    }
+    [data-app-theme="anna"] .anna-card-motifs::after {
+      content:""; position:absolute; top:30px; right:94px; width:18px; height:18px;
+      background:#FFE64A; clip-path:polygon(50% 0,100% 90%,0 72%);
+      transform:rotate(14deg);
+    }
+    [data-app-theme="anna"] .anna-card-motifs i {
+      position:absolute; top:49px; right:53px; width:27px; height:3px;
+      border-radius:4px; background:#5BA9FF; transform:rotate(-47deg);
+    }
+    [data-app-theme="anna"] .card--violet .anna-card-motifs::after { background:#FF5B86; }
+    [data-app-theme="anna"] .card--orange .anna-card-motifs::after { background:#FFD94A; }
+    [data-app-theme="anna"][data-theme="dark"] .anna-card-motifs::before {
+      background:radial-gradient(circle,rgba(111,175,255,.64) 1.25px,transparent 1.6px) 0 0/9px 9px;
+    }
+    [data-app-theme="anna"][data-theme="dark"] .anna-card-motifs::after { background:#FFE66B; }
+    [data-app-theme="anna"][data-theme="dark"] .card--violet .anna-card-motifs::after { background:#FF6E99; }
+    [data-app-theme="anna"] .card:hover { transform:translateY(-2px); box-shadow:0 9px 20px rgba(35,66,118,.11); }
+    [data-app-theme="anna"] .card__title { display:flex; align-items:center; gap:20px; font-size:29px; line-height:1.2; font-weight:850; }
+    [data-app-theme="anna"] .card__title::before {
+      content:""; flex:0 0 76px; width:76px; height:76px; border-radius:17px;
+      background-color:#1769E8; background-image:var(--anna-bank-icon); background-position:center;
+      background-repeat:no-repeat; background-size:34px 34px;
+    }
+    [data-app-theme="anna"] .card--violet .card__title::before { background-color:#FF4568; background-image:var(--anna-timer-icon); }
+    [data-app-theme="anna"] .card--orange .card__title::before { background-color:#FF7929; background-image:var(--anna-review-icon); }
+    [data-app-theme="anna"] .card__subtitle,
+    [data-app-theme="anna"] .card__caption { color:var(--copy); }
+    [data-app-theme="anna"] .card__subtitle { margin:8px 0 0 96px; font-size:17px; }
+    [data-app-theme="anna"][data-theme="dark"] .card__subtitle,
+    [data-app-theme="anna"][data-theme="dark"] .card__caption { color:#B4C0D5; }
+    [data-app-theme="anna"] .visual { height:clamp(92px,9vw,122px); margin:8px 0 4px; display:flex; align-items:flex-end; justify-content:flex-start; }
+    [data-app-theme="anna"] .visual::before {
+      content:""; position:absolute; inset:0 5% 8% 32%;
+      background-position:center; background-repeat:no-repeat;
+      background-size:contain; opacity:.55; pointer-events:none;
+    }
+    [data-app-theme="anna"] .card--rose .visual::before { background-image:var(--anna-bank-art); }
+    [data-app-theme="anna"] .card--violet .visual::before { background-image:var(--anna-timer-art); }
+    [data-app-theme="anna"] .card--orange .visual::before { background-image:var(--anna-review-art); }
+    [data-app-theme="anna"] .gauge,
+    [data-app-theme="anna"] .map,
+    [data-app-theme="anna"] .question-art { display:none; }
+    [data-app-theme="anna"] .metric { position:relative; left:auto; bottom:auto; transform:none; margin-left:0; }
+    [data-app-theme="anna"] .metric__number { color:#1769E8; font-size:clamp(72px,8.5vw,116px); line-height:1; font-weight:850; letter-spacing:-.04em; }
+    [data-app-theme="anna"][data-theme="dark"] .metric__number { color:#58A4FF; }
+    [data-app-theme="anna"] .metric__unit { color:var(--ink); }
+    [data-app-theme="anna"] .card__caption { display:none; }
+    [data-app-theme="anna"] .card__action {
+      display:flex; width:80%; min-height:60px; margin-top:auto; border:1px solid #1769E8;
+      border-radius:32px; color:#fff; background:#1769E8; font-size:21px;
+      font-weight:750; justify-content:center; align-items:center;
+    }
+    [data-app-theme="anna"] .card--violet .card__action { background:#FF4568; border-color:#FF4568; }
+    [data-app-theme="anna"] .card--orange .card__action { background:#FF7929; border-color:#FF7929; }
+    [data-app-theme="anna"] .card__action:hover { filter:brightness(.95); box-shadow:0 6px 15px rgba(23,105,232,.2); }
+    [data-app-theme="anna"] .card__action:disabled { background:#AEB9CB; border-color:#AEB9CB; color:#fff; }
+    [data-app-theme="anna"] .home-footer-note { display:flex; margin:24px 24px 0; padding:0; border-top:1px solid var(--line); }
+    [data-app-theme="anna"] .footnote { color:var(--copy); font-size:15px; }
+    [data-app-theme="anna"] .chiyo-only { display:none !important; }
+    [data-app-theme="anna"] button:focus-visible { outline:3px solid #1769E8; outline-offset:3px; }
+    @media (max-width:1100px) {
+      [data-app-theme="chiyo"] .cover-note { left:48%; width:122px; height:130px; }
+      [data-app-theme="chiyo"] .cover-note span { font-size:12px; top:29px; left:20px; }
+      [data-app-theme="chiyo"] .cover-dialog { width:128px; font-size:15px; right:8px; }
+      [data-app-theme="chiyo"] .card__title { font-size:25px; }
+      [data-app-theme="chiyo"] .card__subtitle { font-size:13px; }
+      [data-app-theme="chiyo"] .card__caption { font-size:14px; }
+      [data-app-theme="chiyo"] .card-scribble { font-size:12px; }
+      [data-app-theme="chiyo"] .review-sticky { display:none; }
+      [data-app-theme="chiyo"] .footer-encouragement { display:none; }
+    }
+    @media (max-width:720px) {
+      [data-app-theme="chiyo"] .masthead { height:285px; }
+      [data-app-theme="chiyo"] .masthead h1 { left:22px; top:42px; max-width:58%; font-size:clamp(32px,5vw,39px); }
+      [data-app-theme="chiyo"] .masthead .intro { top:170px; left:25px; max-width:54%; font-size:14px; }
+      [data-app-theme="chiyo"] .masthead .chiyo-cover { width:50%; height:80%; top:auto; bottom:0; }
+      [data-app-theme="chiyo"] .cover-note,
+      [data-app-theme="chiyo"] .cover-dialog,
+      [data-app-theme="chiyo"] .cover-editor-label { display:none; }
+      [data-app-theme="chiyo"] .cover-panel { width:61%; height:82%; }
+      [data-app-theme="chiyo"] .cards { grid-template-columns:1fr; max-width:480px; margin:auto; }
+      [data-app-theme="chiyo"] .card { min-height:450px; }
+      [data-app-theme="chiyo"] .visual { height:190px; }
+      [data-app-theme="chiyo"] .card-scribble { font-size:15px; }
+    }
+    @media (max-width: 950px) {
+      .masthead { grid-template-columns: minmax(0,1fr) minmax(220px,.7fr); gap:30px; }
+      .card { min-height:350px; padding:26px 16px 21px; }
+      .visual { height:140px; }
+    }
+    @media (max-width: 720px) {
+      .stage { padding:28px 20px 26px; }
+      .masthead { grid-template-columns:1fr; gap:12px; margin-bottom:28px; }
+      h1 { font-size:clamp(34px,9vw,49px); }
+      .intro { padding-top:0; font-size:14px; }
+      .cards { grid-template-columns:1fr; max-width:480px; margin:0 auto; gap:15px; }
+      .card { min-height:344px; padding:25px 22px 22px; }
+      .visual { height:132px; }
+      .metric__number { font-size:58px; }
+      .card__caption { min-height:0; margin-bottom:16px; }
+      .footnote { max-width:480px; margin:18px auto 0; line-height:1.7; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
+      .card, .card:hover, .card:active { transform:none !important; }
+      .visual, .question-art, .card__action:hover, .card__action:active { transform:none !important; }
+      .gauge .needle { transform:none !important; opacity:1 !important; }
+      .map path { stroke-dashoffset:0 !important; }
+      .map circle { transform:none !important; opacity:1 !important; }
+      .card::after { display:none !important; }
+    }
+    html.motion-off *, html.motion-off *::before, html.motion-off *::after {
+      animation-duration:.01ms !important; animation-iteration-count:1 !important;
+      scroll-behavior:auto !important; transition-duration:.01ms !important;
+    }
+    html.motion-off .card, html.motion-off .card:hover, html.motion-off .card:active,
+    html.motion-off .visual, html.motion-off .card__action:hover,
+    html.motion-off .card__action:active { transform:none !important; }
+  </style>
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+</head>
+<body>
+  <main class="stage" id="stage">
+    <div class="content">
+      <header class="masthead">
+        <svg class="flight-guide" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 15 25 3 17 25 12 17Z M12 17 25 3 M12 17 11 23 15 20"/></svg>
+        <div class="cover-panel chiyo-only" aria-hidden="true"></div>
+        <div class="cover-papers chiyo-only" aria-hidden="true"></div>
+        <div class="chiyo-cover" aria-hidden="true"></div>
+        <div class="anna-cover" aria-hidden="true"></div>
+        <svg class="anna-home-motifs" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <pattern id="anna-home-dots" width="12" height="12" patternUnits="userSpaceOnUse">
+              <circle cx="3" cy="3" r="2.1" fill="#1687F8" fill-opacity=".78"/>
+            </pattern>
+          </defs>
+          <path class="dots" d="M390 12h116v100H390z M875 380h100v78H875z M25 460h110v92H25z"/>
+          <polygon class="outline" points="390,82 425,27 458,91"/>
+          <polygon class="sun" points="742,57 773,13 787,72"/>
+          <polygon class="rose" points="965,218 994,245 956,258"/>
+          <polygon class="blue" points="438,419 471,394 467,440"/>
+          <polygon class="sun" points="120,535 151,500 157,551"/>
+          <path class="scribble" d="M320 485l31-45 24 28 28-45"/>
+          <path class="scribble" d="M872 105l25-33 19 23 26-36"/>
+        </svg>
+        <div class="cover-note chiyo-only"><span>好的练习<br>会让未来的我<br>更喜欢现在努力的自己！</span></div>
+        <div class="cover-dialog chiyo-only">今天也一起<br>完成练习吧！</div>
+        <div class="cover-editor-label chiyo-only">分镜 · 校对<br>完成！</div>
+        <aside class="industrial-page-meta industrial-only" aria-hidden="true">
+          <div class="industrial-page-meta__top"><i></i><span>SIMULATION TRAINING<br>FOR A SAFER SKY</span></div>
+          <div class="industrial-page-meta__columns">
+            <span>CAAC<br>GROUND STATION<br>TRAINING</span>
+            <b>FOCUS<br>PRACTICE<br>IMPROVE</b>
+            <em><i class="industrial-meta-bars"><b></b><b></b><b></b><b></b><b></b></i><br>ALWAYS HIGHER</em>
+          </div>
+        </aside>
+        <h1>这一页，<br><span class="headline-line">轮到你掌握<span class="accent">航线</span>。</span></h1>
+        <div class="intro">
+          <p class="hero-subtitle"><span>把每一次练习，</span><span>写成新的进步。</span></p>
+          <p>把地面站知识、真题练习与限时模拟放在一处。先看懂操作，再动手练习，每次进度都会保存在本机。</p>
+          <button class="start-link" type="button" onclick="callBridge('startPractice')">
+            <span id="start-label">继续学习</span>
+            <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13M11 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </header>
+      <section class="cards" aria-label="学习入口">
+        <article class="card card--rose" data-number="01">
+          <div class="anna-card-motifs" aria-hidden="true"><i></i></div>
+          <div class="industrial-card-head industrial-only" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM15 3v5h4M8 12h8M8 16h8"/></svg>
+            <span>QUESTION<br>BANK</span>
+            <i></i>
+          </div>
+          <h2 class="card__title">题库练习</h2>
+          <p class="card__subtitle">真题题卡 · 搜索 · 随机练习</p>
+          <div class="visual">
+            <div class="chiyo-illustration chiyo-only" aria-hidden="true"></div>
+            <svg class="home-binder chiyo-only" viewBox="0 0 42 38" aria-hidden="true"><path d="M9 20V12C9-1 33-1 33 12v8M14 20V11c0-8 14-8 14 0v9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 17h30l-4 17H10Z" fill="#ed4058" stroke="currentColor" stroke-width="1.8"/></svg>
+            <div class="card-scribble chiyo-only">多练一题，<br>就多一分底气！</div>
+            <svg class="gauge" viewBox="0 0 190 138" aria-hidden="true"><path d="M15 130 A80 80 0 0 1 175 130"/><path d="M28 130 A67 67 0 0 1 162 130" stroke-dasharray="1 7"/><line class="needle" x1="95" y1="130" x2="140" y2="58"/></svg>
+            <div class="metric" role="group" aria-label="题库题量"><span class="metric__number" id="question-count" aria-live="polite">—</span><span class="metric__unit">题</span></div>
+          </div>
+          <p class="card__caption">按题号查找、随机抽题，结合参考答案检查你的操作。</p>
+          <div class="industrial-card-footer industrial-only"><span>EXPLORE KNOWLEDGE<br>BUILD CONFIDENCE</span></div>
+          <button class="card__action" aria-label="打开题库" type="button" onclick="callBridge('navigate', 1)"><span class="normal-action-label">打开题库</span><svg class="industrial-arrow industrial-only" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7"/></svg></button>
+        </article>
+        <article class="card card--violet" data-number="02">
+          <div class="anna-card-motifs" aria-hidden="true"><i></i></div>
+          <div class="industrial-card-head industrial-only" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 2h6M12 2v3M19 6l2-2M12 7v6l4 2M12 5a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"/></svg>
+            <span>SIMULATION<br>EXAM</span>
+            <i></i>
+          </div>
+          <h2 class="card__title">限时模拟</h2>
+          <p class="card__subtitle">分段计时 · 熟悉考试节奏</p>
+          <div class="visual">
+            <div class="chiyo-illustration chiyo-only" aria-hidden="true"></div>
+            <div class="card-scribble chiyo-only">专注，<br>就是进步！</div>
+            <div class="question-art" aria-hidden="true"><div class="blocks"><i></i><i></i><i></i><i></i></div></div>
+            <div class="metric" role="group" aria-label="已练习题量"><span class="metric__number" id="done-count" aria-live="polite">—</span><span class="metric__unit">已练</span></div>
+          </div>
+          <p class="card__caption">分开设置阅题与作答时长，计时过程不受页面切换影响。</p>
+          <div class="industrial-card-footer industrial-only"><span>PRACTICE UNDER PRESSURE<br>IMPROVE STEP BY STEP</span></div>
+          <button class="card__action" aria-label="开始计时" type="button" onclick="callBridge('navigate', 0)"><span class="normal-action-label">开始计时</span><svg class="industrial-arrow industrial-only" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7"/></svg></button>
+        </article>
+        <article class="card card--orange" data-number="03">
+          <div class="anna-card-motifs" aria-hidden="true"><i></i></div>
+          <div class="industrial-card-head industrial-only" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h1M3 12h1M3 18h1"/></svg>
+            <span>REVIEW<br>&amp; ANALYZE</span>
+            <i></i>
+          </div>
+          <div class="review-sticky chiyo-only">从错误中<br>找到进步的方向！<br>— 千代</div>
+          <h2 class="card__title">错题回顾</h2>
+          <p class="card__subtitle">练习记录 · 关键概念与配图</p>
+          <div class="visual">
+            <div class="chiyo-illustration chiyo-only" aria-hidden="true"></div>
+            <svg class="review-mark chiyo-only" viewBox="0 0 90 50" aria-hidden="true"><ellipse cx="25" cy="29" rx="22" ry="15" transform="rotate(-25 25 29)" fill="none" stroke="currentColor" stroke-width="2.7"/><path d="m65 9 18 26M82 8 65 36" stroke="currentColor" stroke-width="3"/></svg>
+            <div class="card-scribble chiyo-only">这里，<br>再复习一下！</div>
+            <svg class="map" viewBox="0 0 360 150" preserveAspectRatio="none"><path d="M0 100h70c18 0 17-42 38-42h96c18 0 15 42 36 42h120M8 54h88c20 0 16 40 37 40h82c18 0 16-40 37-40h108M0 126h90c19 0 18-36 38-36h82c18 0 17 36 37 36h113"/><circle cx="70" cy="100" r="4.5"/><circle cx="108" cy="58" r="4.5"/><circle cx="204" cy="58" r="4.5"/><circle cx="240" cy="100" r="4.5"/><circle cx="253" cy="126" r="4.5"/></svg>
+            <div class="metric" role="group" aria-label="待复习错题数"><span class="metric__number" id="wrong-count" aria-live="polite">—</span><span class="metric__unit">待复习</span></div>
+          </div>
+          <p class="card__caption">按判题记录巩固概念，再回到题库重新作答。</p>
+          <div class="industrial-card-footer industrial-only"><span>LEARN FROM MISTAKES<br>MAKE IT STICK</span></div>
+          <button class="card__action" id="review-button" aria-label="复习错题" type="button" onclick="callBridge('reviewWrong')"><span class="normal-action-label" id="review-label">复习错题</span><svg class="industrial-arrow industrial-only" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7"/></svg></button>
+        </article>
+      </section>
+    <div class="industrial-ruler industrial-only" aria-hidden="true">
+      <div class="industrial-ruler__labels"><span>118.0</span><span>120.0</span><span>122.0</span><span class="current">124.0</span><span>126.0</span><span>128.0</span><span>130.0 <small>MHz</small></span></div>
+      <div class="industrial-ruler__track"><i></i></div>
+    </div>
+      <div class="industrial-home-footer industrial-only" aria-hidden="true">
+        <div class="industrial-home-footer__dots"></div>
+        <div class="industrial-home-footer__left">TUNE<br>PRACTICE<br>PROGRESS</div>
+        <div class="industrial-home-footer__brand">AZIMUTH <i>·</i> CAAC <i>·</i> TRAINING <i>·</i> ALWAYS HIGHER <b>—</b></div>
+        <div class="industrial-home-footer__dots"></div>
+        <div class="industrial-home-footer__right">GOOD OPERATORS<br>KEEP THE WORLD<br>CONNECTED</div>
+      </div>
+      <div class="home-footer-note">
+        <p class="footnote" id="footnote">学习数据保存在本机。练习进度与答题正确率分别记录。</p>
+        <span class="footer-encouragement chiyo-only">一步一步，接近更好的自己！ ❀</span>
+      </div>
+    </div>
+  </main>
+  <script>
+    window.setApplicationTheme = function (theme, decorationUrl, characterUrl, assets) {
+      const appTheme = ['chiyo', 'anna'].includes(theme) ? theme : 'default';
+      document.documentElement.dataset.appTheme = appTheme;
+      const annaFontUrl = (assets || {})['--anna-font'];
+      if (appTheme === 'anna' && annaFontUrl && !window.annaFontPromise) {
+        window.annaFontPromise = new FontFace('Anna Noto', `url("${annaFontUrl}")`,
+          {weight:'100 900'}).load().then(font => document.fonts.add(font)).catch(() => null);
+      }
+      document.documentElement.style.setProperty('--chiyo-decor',
+        appTheme === 'chiyo' ? `url("${decorationUrl}")` : 'none');
+      for (const [key, url] of Object.entries(assets || {})) {
+        document.documentElement.style.setProperty(key,
+          (key.startsWith('--anna-') ? appTheme === 'anna' : appTheme === 'chiyo')
+            ? `url("${url}")` : 'none');
+      }
+      const cover = document.querySelector('.chiyo-cover');
+      if (cover) cover.style.backgroundImage = appTheme === 'chiyo'
+        ? `url("${characterUrl}")` : 'none';
+      const annaCover = document.querySelector('.anna-cover');
+      if (annaCover) annaCover.style.backgroundImage = appTheme === 'anna'
+        ? `url("${characterUrl}")` : 'none';
+    };
+    let caacBridge = null;
+    function callBridge(method, ...args) {
+      if (caacBridge && typeof caacBridge[method] === 'function') caacBridge[method](...args);
+    }
+    const counterMotions = new Map();
+    function motionAllowed() {
+      return !document.hidden && !document.documentElement.classList.contains('motion-off')
+        && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+    function finishCounters() {
+      for (const [element, motion] of counterMotions) {
+        cancelAnimationFrame(motion.frame);
+        element.textContent = motion.target;
+      }
+      counterMotions.clear();
+    }
+    function updateCounter(id, target) {
+      const element = document.getElementById(id);
+      target = Math.max(0, Number(target) || 0);
+      const previous = counterMotions.get(element);
+      if (previous && previous.target === target) return;
+      if (previous) cancelAnimationFrame(previous.frame);
+      counterMotions.delete(element);
+      const start = Number(element.textContent) || 0;
+      if (start === target || !motionAllowed()) {
+        element.textContent = target;
+        return;
+      }
+      const motion = {target, frame:0, started:performance.now()};
+      counterMotions.set(element, motion);
+      const tick = now => {
+        if (!motionAllowed()) { finishCounters(); return; }
+        const t = Math.min(1, (now - motion.started) / 760);
+        const eased = 1 - Math.pow(1 - t, 3);
+        element.textContent = Math.round(start + (target - start) * eased);
+        if (t < 1) motion.frame = requestAnimationFrame(tick);
+        else counterMotions.delete(element);
+      };
+      motion.frame = requestAnimationFrame(tick);
+    }
+    window.updateDashboard = function (data) {
+      updateCounter('question-count', data.questionCount ?? 0);
+      updateCounter('done-count', data.doneCount ?? 0);
+      updateCounter('wrong-count', data.wrongCount ?? 0);
+      const reviewButton = document.getElementById('review-button');
+      reviewButton.disabled = !data.wrongCount;
+      const reviewLabel = document.getElementById('review-label');
+      const reviewText = data.wrongCount ? '复习错题' : '暂无错题';
+      if (reviewLabel) reviewLabel.textContent = reviewText;
+      reviewButton.setAttribute('aria-label', reviewText);
+      document.getElementById('start-label').textContent = data.hasResume && data.nextQuestionId
+        ? `继续第 ${data.nextQuestionId} 题` : '开始第一题';
+      document.getElementById('footnote').textContent = data.hasQuestions
+        ? `题库覆盖 ${data.regionCount} 个地区、${data.examCount} 个考次。学习数据保存在本机；练习进度与答题正确率分别记录。`
+        : '题库暂未加载。请打开题库检查内容，或通过设置导入题目。';
+    };
+    const homeAnimations = new Map();
+    let paperFlightSeen = false;
+    const homeEase = getComputedStyle(document.documentElement).getPropertyValue('--ease').trim();
+    function animateHomeElement(element, from, to, options) {
+      const old = homeAnimations.get(element);
+      // 被打断时从当前呈现帧接续；完整播放后再次进入则从设计起点重播。
+      const current = old ? getComputedStyle(element) : null;
+      const start = Object.assign({}, from);
+      const initial = {
+        opacity: 0, translate: '0px 14px', scale: '.98',
+        transform: 'rotate(-52deg)', strokeDashoffset: '700'
+      };
+      for (const key of Object.keys(start)) {
+        if (start[key] === 'current')
+          start[key] = current ? current[key] : initial[key];
+      }
+      if (old) old.cancel();
+      const animation = element.animate([start, to], {
+        duration: options.duration, delay: options.delay || 0,
+        easing: homeEase, fill: 'both'
+      });
+      homeAnimations.set(element, animation);
+      animation.finished.then(() => {
+        if (homeAnimations.get(element) === animation) {
+          homeAnimations.delete(element);
+          animation.cancel();
+        }
+      }).catch(() => {});
+    }
+    window.cancelHomeEntrance = function () {
+      for (const animation of homeAnimations.values()) animation.cancel();
+      homeAnimations.clear();
+      finishCounters();
+    };
+    window.prepareHomeEntrance = function () {
+      window.cancelHomeEntrance();
+      document.documentElement.classList.add('home-pending');
+    };
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) window.cancelHomeEntrance();
+    });
+    new MutationObserver(() => {
+      if (!motionAllowed()) window.cancelHomeEntrance();
+    }).observe(document.documentElement, {attributes:true, attributeFilter:['class']});
+    function playPaperFlight(stage) {
+      if (paperFlightSeen) return;
+      const plane = stage.querySelector('.flight-guide');
+      const action = stage.querySelector('.start-link');
+      const masthead = stage.querySelector('.masthead');
+      if (!plane || !action || !masthead) return;
+      paperFlightSeen = true;
+      const bounds = masthead.getBoundingClientRect();
+      const button = action.getBoundingClientRect();
+      const end = {x:Math.min(bounds.width - 32, button.right - bounds.left + 22),
+                   y:button.bottom - bounds.top + 6};
+      const start = {x:Math.min(bounds.width - 35, end.x + 180), y:Math.max(30, end.y - 150)};
+      const control = {x:end.x + 130, y:end.y + 30};
+      const frames = [];
+      // 用同一条曲线确定位置与朝向，纸飞机落在按钮旁的留白内。
+      for (let i = 0; i <= 30; i++) {
+        const t = i / 30, u = 1 - t;
+        const x = u*u*start.x + 2*u*t*control.x + t*t*end.x;
+        const y = u*u*start.y + 2*u*t*control.y + t*t*end.y;
+        const dx = 2*u*(control.x-start.x) + 2*t*(end.x-control.x);
+        const dy = 2*u*(control.y-start.y) + 2*t*(end.y-control.y);
+        const angle = Math.atan2(dy, dx) * 180 / Math.PI + 45;
+        frames.push({transform:`translate(${x}px,${y}px) rotate(${angle}deg)`,
+          opacity:Math.min(1, t*8, (1-t)*7), offset:t});
+      }
+      const animation = plane.animate(frames, {duration:1900, delay:700,
+        easing:'cubic-bezier(.4,0,.2,1)', fill:'both'});
+      homeAnimations.set(plane, animation);
+      animation.finished.then(() => {
+        if (homeAnimations.get(plane) === animation) {
+          homeAnimations.delete(plane);
+          animation.cancel();
+        }
+      }).catch(() => {});
+    }
+    window.playHomeEntrance = function () {
+      const stage = document.getElementById('stage');
+      if (!stage || document.documentElement.classList.contains('motion-off') ||
+          matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.cancelHomeEntrance();
+        document.documentElement.classList.remove('home-pending');
+        return;
+      }
+      const headline = stage.querySelector('.masthead h1');
+      const intro = stage.querySelector('.masthead .intro');
+      const annaTheme = document.documentElement.dataset.appTheme === 'anna';
+      if (annaTheme) {
+        const subtitle = stage.querySelector('.hero-subtitle');
+        const action = stage.querySelector('.intro .start-link');
+        // 三个独立元素轻微错峰，真实按钮背后不再有图片按钮。
+        [headline, subtitle, action].forEach((element, index) => {
+          if (element) animateHomeElement(element,
+            {opacity:'current', translate:'current'},
+            {opacity:1, translate:'0px 0px'}, {duration:600, delay:index * 85});
+        });
+      }
+      if (headline && !annaTheme) animateHomeElement(headline,
+        {opacity:'current', translate:'current'},
+        {opacity:1, translate:'0px 0px'}, {duration:680, delay:30});
+      if (intro && !annaTheme) animateHomeElement(intro,
+        {opacity:'current', translate:'current'},
+        {opacity:1, translate:'0px 0px'}, {duration:600, delay:130});
+      // 人物和封面装饰分层交接，标题位置保持稳定，避免背景文字重叠。
+      stage.querySelectorAll('.chiyo-cover, .anna-cover').forEach(character => {
+        if (getComputedStyle(character).display === 'none') return;
+        animateHomeElement(character,
+          {opacity:0, scale:1.025}, {opacity:1, scale:1},
+          {duration:620, delay:60});
+      });
+      stage.querySelectorAll('.cover-note, .cover-dialog, .anna-home-motifs').forEach((art, index) => {
+        if (getComputedStyle(art).display === 'none') return;
+        animateHomeElement(art, {opacity:0}, {opacity:1},
+          {duration:480, delay:120 + index * 65});
+      });
+      stage.querySelectorAll('.card').forEach((card, index) => {
+        animateHomeElement(card,
+          {opacity:'current', translate:'current', scale:'current'},
+          {opacity:1, translate:'0px 0px', scale:1},
+          {duration:520, delay:index * 90});
+        const title = card.querySelector('.card__title');
+        const action = card.querySelector('.card__action');
+        if (title) animateHomeElement(title, {opacity:0}, {opacity:1},
+          {duration:360, delay:100 + index * 85});
+        if (action) animateHomeElement(action, {opacity:0}, {opacity:1},
+          {duration:330, delay:190 + index * 85});
+      });
+      const needle = stage.querySelector('.gauge .needle');
+      if (needle) animateHomeElement(needle,
+        {opacity:'current', transform:'current'},
+        {opacity:1, transform:'rotate(0deg)'}, {duration:620, delay:160});
+      const route = stage.querySelector('.map path');
+      if (route) animateHomeElement(route,
+        {strokeDashoffset: homeAnimations.has(route) ? 'current' : '700'},
+        {strokeDashoffset:0}, {duration:760, delay:190});
+      stage.querySelectorAll('.map circle').forEach((circle, index) => {
+        animateHomeElement(circle,
+          {opacity:'current', transform:'current'},
+          {opacity:.95, transform:'scale(1)'},
+          {duration:360, delay:540 + index * 70});
+      });
+      playPaperFlight(stage);
+      requestAnimationFrame(() =>
+        document.documentElement.classList.remove('home-pending'));
+    };
+    if (window.qt && qt.webChannelTransport) {
+      new QWebChannel(qt.webChannelTransport, channel => {
+        caacBridge = channel.objects.caac;
+        caacBridge.dashboardData(json => window.updateDashboard(JSON.parse(json)));
+      });
+    }
+  </script>
+  <script src="motion250.js"></script>
+  <script src="interactive-hover.js"></script>
+</body>
+</html>

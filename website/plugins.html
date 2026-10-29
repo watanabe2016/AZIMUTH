@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f7ff">
+  <meta name="description" content="AZIMUTH 插件市场：查看插件目录开放状态与当前可安装内容。">
+  <title>插件市场 · AZIMUTH 方位角地面站</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>
+    (() => {
+      try {
+        const mode = localStorage.getItem('azimuth-site-theme');
+        if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode;
+      } catch (_) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/styles.css?v=20261029-filing">
+  <script src="/app.js?v=20261016-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="AZIMUTH 首页">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/azimuth-logo-board.png" alt=""></span>
+        <span class="brand-name">AZIMUTH <small>方位角地面站</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="/#features">功能亮点</a>
+        <a href="/#screens">软件一览</a>
+        <a href="/plugins.html" aria-current="page">插件市场</a>
+        <a href="/skins.html">皮肤市场</a>
+        <a href="/#download">获取软件</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换外观模式">
+          <span class="theme-icon" aria-hidden="true">◐</span><span id="theme-label">跟随系统</span>
+        </button>
+        <a class="button button-primary button-small" href="/#download">免费下载 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="market-main">
+    <section class="market-hero section-wrap aurora-surface">
+      <div class="market-hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> AZIMUTH / PLUGINS</div>
+        <h1>插件市场，<br><span>从可靠的扩展开始。</span></h1>
+        <p>这里用于展示与 AZIMUTH 配套的扩展内容。当前发布版尚未开放插件安装，暂时没有可下载插件。</p>
+        <div class="market-pills">
+          <span class="market-pill market-pill-status"><i></i> 当前状态：尚未开放</span>
+          <span class="market-pill">可下载插件：0</span>
+        </div>
+      </div>
+      <article class="plugin-stage spotlight-card" data-spotlight>
+        <div class="stage-aurora" aria-hidden="true"></div>
+        <div class="stage-orbit orbit-outer" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="stage-topline"><span>扩展目录</span><span class="stage-state"><i></i> 准备中</span></div>
+        <div class="stage-count"><strong>0</strong><span>个可安装插件</span></div>
+        <p>当前版本尚无可用扩展，页面不会显示示例插件或虚构下载项。</p>
+        <div class="stage-footer"><span>AZIMUTH</span><span>PLUGIN MARKET</span><span>·</span></div>
+      </article>
+    </section>
+
+    <section class="market-catalog section-wrap">
+      <div class="section-heading market-section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> 插件目录</div><h2>当前没有可下载内容。</h2></div>
+        <p>等插件安装能力与兼容内容准备好后，再把可用项目放进目录。</p>
+      </div>
+      <div class="plugin-empty spotlight-card" data-spotlight>
+        <div class="empty-symbol" aria-hidden="true">＋</div>
+        <div class="empty-copy"><span class="feature-index violet">目录状态 / 0 项</span><h3>插件目录暂未开放</h3><p>当前 AZIMUTH 发布包没有提供可安装插件。后续若开放目录，会在这里列出实际可用的扩展与版本信息。</p></div>
+        <div class="empty-aside"><span class="empty-status"><i></i> 暂无可安装项</span><a class="button button-glass" href="/#features">看看软件现有功能 <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="market-link-grid">
+        <a class="market-link-card" href="/skins.html"><span class="market-link-icon">✳</span><span><b>浏览皮肤市场</b><small>查看当前 AZIMUTH 主题素材</small></span><span class="market-link-arrow">↗</span></a>
+        <a class="market-link-card" href="/#download"><span class="market-link-icon market-link-icon-blue">↓</span><span><b>获取 AZIMUTH</b><small>先体验现有的学习功能</small></span><span class="market-link-arrow">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true"><img src="/assets/azimuth-logo-board.png" alt=""></span><span class="brand-name">AZIMUTH <small>方位角地面站</small></span></a>
+    <p>把每一次练习，写成新的进步。</p>
+    <div class="footer-actions"><a href="/plugins.html" aria-current="page">插件市场</a><a href="/skins.html">皮肤市场</a><button type="button" class="footer-donate" data-open-donation>♡ 赞赏支持</button><a href="https://github.com/watanabe2016/AZIMUTH" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 ↗</a></div>
+    <small class="copyright">© 2026 AZIMUTH · Made for learning</small>
+    <a class="icp-filing" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026167359号-1</a>
+  </footer>
+
+  <dialog class="donation-dialog" id="donation-dialog" aria-labelledby="donation-title">
+    <button class="dialog-close" type="button" aria-label="关闭" data-close-donation>×</button>
+    <div class="donation-mark">♡</div><div class="eyebrow"><span class="eyebrow-dot"></span> 如果它帮到了你</div>
+    <h2 id="donation-title">请作者喝杯咖啡</h2><p>感谢你支持 AZIMUTH 的持续改进。</p>
+    <img class="donation-qr" src="/assets/reward-qrcode.png" alt="微信赞赏码"><small>微信扫码 · 谢谢你的支持</small>
+  </dialog>
+</body>
+</html>

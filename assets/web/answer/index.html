@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="vendor/katex.min.css">
+  <style>
+    html, body { margin: 0; padding: 0; background: transparent; }
+    body { color: #26364a; font: 14px/1.72 "Microsoft YaHei UI", "Microsoft YaHei", sans-serif; overflow-wrap: anywhere; }
+    #answer { padding: 10px 14px 18px; }
+    h1, h2, h3, h4 { line-height: 1.35; margin: 1em 0 .45em; }
+    h1 { font-size: 1.35em; } h2 { font-size: 1.2em; } h3 { font-size: 1.08em; }
+    p, ul, ol, blockquote, pre, table { margin: .55em 0; }
+    ul, ol { padding-left: 1.7em; }
+    blockquote { margin-left: 0; padding: 2px 10px; border-left: 3px solid #6485aa; opacity: .9; }
+    pre { overflow: auto; padding: 10px 12px; border-radius: 8px; background: rgba(95,115,140,.13); white-space: pre; }
+    code { font: 12px/1.6 Consolas, "Cascadia Mono", monospace; }
+    :not(pre) > code { padding: 1px 4px; border-radius: 4px; background: rgba(95,115,140,.15); }
+    table { border-collapse: collapse; display: block; max-width: 100%; overflow-x: auto; }
+    th, td { border: 1px solid rgba(112,130,153,.45); padding: 5px 8px; text-align: left; }
+    th { background: rgba(112,130,153,.12); }
+    img { display: block; max-width: 100%; max-height: 640px; object-fit: contain; margin: 8px 0; border-radius: 5px; }
+    a { color: #367be5; text-decoration: underline; pointer-events: none; }
+    hr { border: 0; border-top: 1px solid rgba(112,130,153,.35); }
+    .katex-display { overflow-x: auto; overflow-y: hidden; padding: 3px 0; }
+    .katex-error { color: #b42318; white-space: pre-wrap; }
+    #result-meta { margin: 0 14px 4px; padding: 7px 9px; border-radius: 7px; font-size: 11px; color: #596b80; background: rgba(95,115,140,.09); }
+    body.dark { color: #e5edf7; }
+    body.dark pre, body.dark :not(pre) > code { background: rgba(190,205,225,.13); }
+    body.dark th { background: rgba(190,205,225,.1); }
+    body.dark #result-meta { color: #bac8da; background: rgba(190,205,225,.08); }
+    body.dark th, body.dark td { border-color: rgba(190,205,225,.3); }
+  </style>
+</head>
+<body>
+  <aside id="result-meta" hidden></aside>
+  <main id="answer" aria-live="polite"></main>
+  <script src="vendor/marked.min.js"></script>
+  <script src="vendor/katex.min.js"></script>
+  <script src="vendor/auto-render.min.js"></script>
+  <script src="vendor/purify.min.js"></script>
+  <script>
+    marked.setOptions({ gfm: true, breaks: false, pedantic: false, headerIds: false, mangle: false });
+    window.renderApiAnswer = function(markdown, dark, metaHtml, originalHtml) {
+      document.body.classList.toggle("dark", !!dark);
+      const answer = document.getElementById("answer");
+      const meta = document.getElementById("result-meta");
+      meta.innerHTML = DOMPurify.sanitize(String(metaHtml || ""), { USE_PROFILES: { html: true } });
+      meta.hidden = !meta.textContent.trim();
+      const safeHtml = originalHtml || marked.parse(String(markdown || ""), { async: false, gfm: true, breaks: false, headerIds: false, mangle: false });
+      answer.innerHTML = DOMPurify.sanitize(safeHtml, {
+        USE_PROFILES: { html: true, svg: true, svgFilters: true },
+        ALLOWED_URI_REGEXP: /^(?:(?:https?):|data:image\/(?:png|jpe?g|gif|webp);base64,|#)/i,
+        FORBID_TAGS: ["style", "script", "iframe", "foreignObject", "object", "embed", "form", "video", "audio"],
+        FORBID_ATTR: ["onerror", "onclick", "onload"]
+      });
+      renderMathInElement(answer, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "$", right: "$", display: false }
+        ],
+        throwOnError: false,
+        strict: "ignore"
+      });
+    };
+    document.addEventListener("click", function(event) {
+      const link = event.target.closest && event.target.closest("a");
+      if (link) event.preventDefault();
+    }, true);
+  </script>
+</body>
+</html>

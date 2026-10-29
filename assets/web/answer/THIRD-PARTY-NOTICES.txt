@@ -1,0 +1,15 @@
+离线答案渲染资源
+
+marked.js 15.0.12
+项目：https://github.com/markedjs/marked
+许可证：MIT
+
+KaTeX 0.16.22（含字体）
+项目：https://github.com/KaTeX/KaTeX
+许可证：MIT
+
+DOMPurify 3.2.6
+项目：https://github.com/cure53/DOMPurify
+许可证：Apache-2.0 或 MPL-2.0
+
+这些静态资源随应用本地分发。题目答案不需要向第三方渲染服务发送。
