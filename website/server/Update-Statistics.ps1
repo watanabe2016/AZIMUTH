@@ -78,7 +78,7 @@ try {
     foreach ($item in @(@{Path=$statePath; Data=$state}, @{Path=$OutputPath; Data=$public})) {
         $temporary = $item.Path + '.tmp'
         [IO.File]::WriteAllText($temporary, ($item.Data | ConvertTo-Json -Depth 8 -Compress), (New-Object Text.UTF8Encoding($false)))
-        if (Test-Path -LiteralPath $item.Path) { [IO.File]::Replace($temporary, $item.Path, $null) } else { [IO.File]::Move($temporary, $item.Path) }
+        if (Test-Path -LiteralPath $item.Path) { [IO.File]::Replace($temporary, $item.Path, ($item.Path + '.previous')) } else { [IO.File]::Move($temporary, $item.Path) }
     }
     $public | ConvertTo-Json -Compress
 } finally {
